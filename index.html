@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ============================================================
+     RAHUL KUSHWAHA — PERSONAL PORTFOLIO
+     File: index.html
+     Purpose: All page structure and content lives here.
+     To edit content: Find the section you want (Ctrl+F the
+     section name) and update the text between the tags.
+     ============================================================ -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ── PAGE TITLE ──────────────────────────────────────────
+         Change the text below to update the browser tab title.
+    ─────────────────────────────────────────────────────────── -->
+    <title>Rahul Kushwaha | Software Developer</title>
+
+    <!-- ── META DESCRIPTION ────────────────────────────────────
+         Used by Google for search previews. Keep under 160 chars.
+    ─────────────────────────────────────────────────────────── -->
+    <meta name="description" content="Rahul Kushwaha — Software Developer specializing in full-stack web, mobile apps, and AI learning systems.">
+    <meta name="author" content="Rahul Kushwaha">
+
+    <!-- ── OPEN GRAPH (Social Share Preview) ──────────────────
+         These control what appears when you share the link
+         on LinkedIn, WhatsApp, Twitter, etc.
+    ─────────────────────────────────────────────────────────── -->
+    <meta property="og:title" content="Rahul Kushwaha | Software Developer">
+    <meta property="og:description" content="Full-Stack Developer · Mobile App Developer · AI Learning Systems Designer">
+    <meta property="og:type" content="website">
+
+    <!-- ── FONTS ───────────────────────────────────────────────
+         Syne       → Used for headings (bold, geometric feel)
+         DM Sans    → Used for body text (clean, readable)
+         To change fonts: replace the Google Fonts URL below
+         and update --font-heading / --font-body in style.css
+    ─────────────────────────────────────────────────────────── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,300&display=swap" rel="stylesheet">
+
+    <!-- ── ICON LIBRARY ────────────────────────────────────────
+         Font Awesome — provides all icons (fa-github, etc.)
+         Do not remove this link or icons will break.
+    ─────────────────────────────────────────────────────────── -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- ── STYLESHEET ──────────────────────────────────────────
+         All visual styling is in style.css
+         Keep this as the last <link> in the <head>
+    ─────────────────────────────────────────────────────────── -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ══════════════════════════════════════════════════════
+         CUSTOM CURSOR
+         Two layered elements that follow the mouse.
+         Controlled in script.js → initCursor()
+         To disable: set cursor: auto in style.css :root
+    ══════════════════════════════════════════════════════════ -->
+    <div class="cursor-outer" id="cursorOuter"></div>
+    <div class="cursor-inner" id="cursorInner"></div>
+
+    <!-- ══════════════════════════════════════════════════════
+         LOADING SCREEN
+         Shown for ~1.8s on page load, then fades out.
+         Edit the loader text in script.js → initLoader()
+    ══════════════════════════════════════════════════════════ -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <!-- Loader initials — change "RK" to your own -->
+            <div class="loader-initials">RK</div>
+            <div class="loader-bar-track">
+                <div class="loader-bar-fill"></div>
+            </div>
+            <p class="loader-label">Initializing portfolio...</p>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════
+         NAVIGATION HEADER
+         Fixed at the top. Becomes opaque on scroll.
+    ══════════════════════════════════════════════════════════ -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-container">
+
+            <!-- ── LOGO / INITIALS ──────────────────────────
+                 Top-left brand mark.
+                 Change "RK" to your initials.
+                 Change the href to "#hero" to scroll to top.
+            ─────────────────────────────────────────────── -->
+            <a href="#hero" class="nav-logo" aria-label="Home">
+                RK<span class="logo-accent">.</span>
+            </a>
+
+            <!-- ── DESKTOP NAV LINKS ────────────────────────
+                 Add or remove <li> items to change nav links.
+                 Each href must match the section id below.
+            ─────────────────────────────────────────────── -->
+            <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="#about"          class="nav-link">About</a></li>
+                    <li><a href="#skills"         class="nav-link">Skills</a></li>
+                    <li><a href="#experience"     class="nav-link">Experience</a></li>
+                    <li><a href="#projects"       class="nav-link">Projects</a></li>
+                    <li><a href="#education"      class="nav-link">Education</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#achievements"   class="nav-link">Achievements</a></li>
+                    <!-- ── CONTACT BUTTON — styled differently ── -->
+                    <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- ── HAMBURGER (Mobile only) ──────────────────
+                 Visible on screens smaller than 900px.
+                 Controlled in script.js → initHamburger()
+            ─────────────────────────────────────────────── -->
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ══════════════════════════════════════════════════════
+         ██  SECTION 1 — HERO
+         Full-screen landing section.
+    ══════════════════════════════════════════════════════════ -->
+    <section id="hero" class="hero-section">
+
+        <!-- Animated background grid lines (purely decorative) -->
+        <div class="hero-grid" aria-hidden="true"></div>
+
+        <!-- Glowing orb accents (purely decorative) -->
+        <div class="hero-orb hero-orb--teal"   aria-hidden="true"></div>
+        <div class="hero-orb hero-orb--green"  aria-hidden="true"></div>
+        <div class="hero-orb hero-orb--dark"   aria-hidden="true"></div>
+
+        <!-- Floating geometric shapes -->
+        <div class="hero-shape hero-shape--1" aria-hidden="true"></div>
+        <div class="hero-shape hero-shape--2" aria-hidden="true"></div>
+        <div class="hero-shape hero-shape--3" aria-hidden="true"></div>
+
+        <div class="container hero-container">
+
+            <!-- ── AVAILABILITY BADGE ──────────────────────
+                 The small pill at the top.
+                 Change "Available for Opportunities" to any status.
+                 To hide it: add style="display:none"
+            ─────────────────────────────────────────────── -->
+            <div class="hero-badge" data-reveal>
+                <span class="badge-pulse"></span>
+                Available for Opportunities
+            </div>
+
+            <!-- ── HERO HEADING ─────────────────────────────
+                 Your name. The <span> applies the accent color.
+                 Edit "Rahul" and "Kushwaha" separately.
+            ─────────────────────────────────────────────── -->
+            <h1 class="hero-title" data-reveal>
+                <span class="hero-title__first">Rahul</span>
+                <span class="hero-title__last">Kushwaha</span>
+            </h1>
+
+            <!-- ── HERO TAGLINE ─────────────────────────────
+                 Two-line tagline below your name.
+                 Edit both lines freely.
+            ─────────────────────────────────────────────── -->
+            <p class="hero-tagline" data-reveal>
+                Engineering the next generation of smart learning —
+                <em>Bridging the gap between knowledge and application.</em>
+            </p>
+
+            <!-- ── TYPED TEXT ───────────────────────────────
+                 The auto-typing subtitle.
+                 To change the rotating lines: edit the
+                 TYPED_STRINGS array in script.js (clearly marked).
+            ─────────────────────────────────────────────── -->
+            <div class="hero-typed" data-reveal>
+                <span class="typed-arrow">›</span>
+                <span id="typedOutput"></span>
+                <span class="typed-caret" aria-hidden="true"></span>
+            </div>
+
+            <!-- ── CALL-TO-ACTION BUTTONS ───────────────────
+                 Primary button → links to #projects
+                 Ghost button   → links to #contact
+                 Download CV button → downloads your resume
+                 Change href values to change destination.
+            ─────────────────────────────────────────────── -->
+            <div class="hero-cta" data-reveal>
+                <a href="#projects" class="btn btn--primary">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a href="#contact" class="btn btn--ghost">
+                    <span>Get In Touch</span>
+                </a>
+                <a href="Rahul_Kushwaha_resume.pdf" download class="btn btn--secondary">
+                    <span>Download CV</span>
+                    <i class="fas fa-download" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <!-- ── SOCIAL ICONS ─────────────────────────────
+                 Add/remove <a> tags to change social links.
+                 Update href to your profile URL.
+                 Update aria-label for accessibility.
+            ─────────────────────────────────────────────── -->
+            <div class="hero-socials" data-reveal>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/rahul-kushwaha-7698b3368" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/Dominus005era" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <!-- LeetCode -->
+                <a href="https://leetcode.com/u/tULNEGtHUu/" target="_blank" rel="noopener" aria-label="LeetCode" class="social-icon">
+                    <i class="fas fa-code"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Scroll cue arrow at the bottom -->
+        <a href="#about" class="scroll-cue" aria-label="Scroll to about section">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+
+    </section>
+    <!-- ── END HERO ──────────────────────────────────────── -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         ██  SECTION 2 — ABOUT
+    ══════════════════════════════════════════════════════════ -->
+    <section id="about" class="section about-section">
+        <div class="container">
+
+            <div class="about-grid">
+
+                <!-- Left Column: Label + Avatar -->
+                <div class="about-left">
+                    <span class="section-eyebrow">01 — About</span>
+                    <h2 class="section-title">Who I Am</h2>
+
+                    <!-- ── AVATAR ───────────────────────────────
+                         Replace the src attribute with your actual profile photo path.
+                         Supported formats: .jpg, .png, .webp
+                         Recommended size: 300x300px or larger
+                    ─────────────────────────────────────────── -->
+                    <div class="avatar-wrap">
+                        <div class="avatar-ring-outer"></div>
+                        <div class="avatar-ring-inner"></div>
+                        <div class="avatar-core avatar-image">
+                            <!-- Replace src with your profile image path -->
+                            <img src="Rahul_Kushwaha.jpeg" alt="Rahul Kushwaha - Profile" class="avatar-photo">
+                        </div>
+                        <!-- Orbiting dot (decorative) -->
+                        <div class="avatar-orbit" aria-hidden="true">
+                            <span class="orbit-dot"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Bio + Stats -->
+                <div class="about-right">
+
+                    <!-- ── BIO PARAGRAPHS ───────────────────────
+                         Edit the text inside <p> tags freely.
+                         Add more <p> tags for more paragraphs.
+                    ─────────────────────────────────────────── -->
+                    <p class="about-bio">
+                        I am a <strong>software developer</strong> at United Institute of Technology focused on transforming passive education into active, scenario-based experiences. By combining full-stack web expertise with modern mobile frameworks like <strong>Flutter and React Native</strong>, I build tools that integrate AI-driven insights into daily learning habits.
+                    </p>
+                    <p class="about-bio">
+                        My mission is to engineer <strong>scalable, intelligent platforms</strong> that turn micro-moments of curiosity into real-world competence — making technology a bridge, not a barrier.
+                    </p>
+
+                    <!-- ── QUICK STATS ──────────────────────────
+                         Three numbered highlights.
+                         Edit the number in <span class="stat-num">
+                         and the label in <span class="stat-lbl">
+                    ─────────────────────────────────────────── -->
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-num">3<span class="stat-plus">+</span></span>
+                            <span class="stat-lbl">Projects Built</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">2</span>
+                            <span class="stat-lbl">Certifications</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">5<span class="stat-plus">+</span></span>
+                            <span class="stat-lbl">Technologies</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn--primary btn--sm">Let's Connect →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ── END ABOUT ─────────────────────────────────────── -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         ██  SECTION 3 — SKILLS
+    ══════════════════════════════════════════════════════════ -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+
+            <div class="section-header">
+                <span class="section-eyebrow">02 — Skills</span>
+                <h2 class="section-title">What I Work With</h2>
+            </div>
+
+            <!-- ── SKILLS GRID ──────────────────────────────
+                 Three columns — one per skill category.
+                 To add a skill: add <li>Skill Name</li>
+                 To add a column: duplicate a .skill-card block
+                 and update the icon, title, and list items.
+            ─────────────────────────────────────────────── -->
+            <div class="skills-grid">
+
+                <!-- Technical Skills Card -->
+                <div class="skill-card" data-reveal>
+                    <div class="skill-card__header">
+                        <!-- Icon: change the fa- class to change the icon -->
+                        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                        <!-- Category title -->
+                        <h3>Technical</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <!-- Add/remove skill items here -->
+                        <li><span class="skill-bullet"></span>React &amp; Vite</li>
+                        <li><span class="skill-bullet"></span>Node.js</li>
+                        <li><span class="skill-bullet"></span>React Native</li>
+                        <li><span class="skill-bullet"></span>Flutter</li>
+                        <li><span class="skill-bullet"></span>Python</li>
+                        <li><span class="skill-bullet"></span>Java</li>
+                        <li><span class="skill-bullet"></span>C++</li>
+                    </ul>
+                </div>
+
+                <!-- Specialized Skills Card -->
+                <div class="skill-card" data-reveal>
+                    <div class="skill-card__header">
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Specialized</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-bullet"></span>AI Agent Integration</li>
+                        <li><span class="skill-bullet"></span>Scenario-Based Learning Design</li>
+                        <li><span class="skill-bullet"></span>Data Visualization</li>
+                        <li><span class="skill-bullet"></span>REST APIs</li>
+                    </ul>
+                </div>
+
+                <!-- Soft Skills Card -->
+                <div class="skill-card" data-reveal>
+                    <div class="skill-card__header">
+                        <div class="skill-icon"><i class="fas fa-seedling"></i></div>
+                        <h3>Soft Skills</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-bullet"></span>Project Planning</li>
+                        <li><span class="skill-bullet"></span>Creative Problem Solving</li>
+                        <li><span class="skill-bullet"></span>Strategic Innovation</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ── END SKILLS ─────────────────────────────────────── -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         ██  SECTION 4 — EXPERIENCE
+    ══════════════════════════════════════════════════════════ -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+
+            <div class="section-header">
+                <span class="section-eyebrow">03 — Experience</span>
+                <h2 class="section-title">Where I've Worked</h2>
+            </div>
+
+            <!-- ── EXPERIENCE ITEMS ──────────────────────────
+                 To add a new experience:
+                   1. Duplicate the entire .exp-item block below
+                   2. Update date, company, role, description, tags
+                 To remove: delete the .exp-item block.
+            ─────────────────────────────────────────────── -->
+            <div class="exp-timeline">
+
+                <div class="exp-item" data-reveal>
+                    <div class="exp-marker">
+                        <!-- Timeline dot — purely decorative -->
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
+                    <div class="exp-card">
+                        <!-- Date / Duration -->
+                        <span class="exp-date">Summer 2025</span>
+                        <!-- Company Name -->
+                        <h3 class="exp-role">Python for Data Science — Summer Training</h3>
+                        <!-- Company + Location -->
+                        <p class="exp-company">
+                            <i class="fas fa-building"></i>
+                            United Institute of Technology, Prayagraj
+                        </p>
+                        <!-- Description of what you did -->
+                        <p class="exp-desc">
+                            Completed an intensive summer training program focused on Python for Data Science. Gained hands-on experience with data analysis workflows, statistical modeling, and applying Python libraries to real-world data-driven problems across engineering use cases.
+                        </p>
+                        <!-- Technology / skill tags used -->
+                        <div class="exp-tags">
+                            <span>Python</span>
+                            <span>Data Science</span>
+                            <span>Analytics</span>
+                            <span>Pandas</span>
+                            <span>Matplotlib</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── TEMPLATE: Copy this block to add more ──
+                <div class="exp-item" data-reveal>
+                    <div class="exp-marker">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
+                    <div class="exp-card">
+                        <span class="exp-date">Month Year – Month Year</span>
+                        <h3 class="exp-role">Your Role / Internship Title</h3>
+                        <p class="exp-company">
+                            <i class="fas fa-building"></i>
+                            Company / Organization Name
+                        </p>
+                        <p class="exp-desc">
+                            What you did, learned, and achieved in this role.
+                        </p>
+                        <div class="exp-tags">
+                            <span>Tag 1</span>
+                            <span>Tag 2</span>
+                        </div>
+                    </div>
+                </div>
+                ─────────────────────────────────────────── -->
+
+            </div>
+        </div>
+    </section>
+    <!-- ── END EXPERIENCE ─────────────────────────────────── -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         ██  SECTION 5 — PROJECTS
+    ══════════════════════════════════════════════════════════ -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+
+            <div class="section-header">
+                <span class="section-eyebrow">04 — Projects</span>
+                <h2 class="section-title">Things I've Built</h2>
+            </div>
+
+            <!-- ── PROJECTS GRID ─────────────────────────────
+                 First card has class "project-card--featured"
+                 which makes it span full width.
+                 To add a project: duplicate any .project-card block.
+                 To add a live link: update href on .project-link
+            ─────────────────────────────────────────────── -->
+            <div class="projects-grid">
+
+                <!-- Project 1 — SAGE (Featured / Full-Width) -->
+                <div class="project-card project-card--featured" data-reveal>
+                    <!-- Left Column: Project number + Logo -->
+                    <div class="proj-sidebar">
+                        <div class="proj-num">01</div>
+                        <div class="proj-logo proj-logo--sidebar">
+                            <img src="sage-logo.png" alt="SAGE Logo" class="logo-img">
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Content -->
+                    <div class="proj-body">
+                        <!-- Icon — change fa- class to change icon -->
+                        <div class="proj-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <!-- Project Title -->
+                        <h3 class="proj-title">SAGE</h3>
+                        <!-- Short Subtitle -->
+                        <p class="proj-subtitle">Scenario-based Applied General Education</p>
+                        <!-- Description -->
+                        <p class="proj-desc">
+                            A mobile platform delivering AI-generated knowledge bites and scenario-based learning to replace mindless scrolling with intentional, curiosity-driven growth. Users earn progress through applied decision scenarios rather than passive content.
+                        </p>
+                        <!-- Tech tags used -->
+                        <div class="proj-tags">
+                            <span>React Native</span>
+                            <span>Flutter</span>
+                            <span>Generative AI</span>
+                        </div>
+                        <!-- Links — update href for live demo or GitHub -->
+                        <div class="proj-links">
+                            <!-- GitHub Link Button -->
+                            <a href="https://github.com/Dominus005era" target="_blank" rel="noopener" class="proj-link proj-link--github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <!-- Preview Button (opens image gallery) -->
+                            <button class="proj-link proj-link--preview" onclick="openGallery('sage')">
+                                <i class="fas fa-image"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Decorative shine overlay (CSS animated) -->
+                    <div class="proj-shine" aria-hidden="true"></div>
+                </div>
+
+                <!-- Project 2 — PathEd -->
+                <div class="project-card" data-reveal>
+                    <div class="proj-sidebar">
+                        <div class="proj-num">02</div>
+                        <div class="proj-logo proj-logo--sidebar">
+                            <img src="path/to/pathed-logo.png" alt="PathEd Logo" class="logo-img">
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-icon"><i class="fas fa-map-signs"></i></div>
+                        <h3 class="proj-title">PathEd</h3>
+                        <p class="proj-subtitle">Educational Ecosystem Platform</p>
+                        <p class="proj-desc">
+                            A comprehensive educational ecosystem featuring recruiter-student matching and interactive academic roadmaps for targeted career growth and skill-based discovery.
+                        </p>
+                        <div class="proj-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Vite</span>
+                        </div>
+                        <div class="proj-links">
+                            <a href="https://github.com/Dominus005era" target="_blank" rel="noopener" class="proj-link proj-link--github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <button class="proj-link proj-link--preview" onclick="openGallery('pathed')">
+                                <i class="fas fa-image"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                    <div class="proj-shine" aria-hidden="true"></div>
+                </div>
+
+                <!-- Project 3 — Interactive Roadmap System -->
+                <div class="project-card" data-reveal>
+                    <div class="proj-sidebar">
+                        <div class="proj-num">03</div>
+                        <div class="proj-logo proj-logo--sidebar">
+                            <img src="path/to/roadmap-logo.png" alt="Roadmap Logo" class="logo-img">
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3 class="proj-title">Interactive Roadmap System</h3>
+                        <p class="proj-subtitle">Gamified Progress UI Component</p>
+                        <p class="proj-desc">
+                            A dynamic UI component that gamifies student progress through real-time state changes and visual skill-node tracking — making learning milestones visible and rewarding.
+                        </p>
+                        <div class="proj-tags">
+                            <span>JavaScript</span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <div class="proj-links">
+                            <a href="https://github.com/Dominus005era" target="_blank" rel="noopener" class="proj-link proj-link--github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <button class="proj-link proj-link--preview" onclick="openGallery('roadmap')">
+                                <i class="fas fa-image"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                    <div class="proj-shine" aria-hidden="true"></div>
+                </div>
+
+                <!-- ── TEMPLATE: Copy this block to add more ──
+                <div class="project-card" data-reveal>
+                    <div class="proj-num">04</div>
+                    <div class="proj-body">
+                        <div class="proj-icon"><i class="fas fa-YOUR-ICON"></i></div>
+                        <h3 class="proj-title">Project Name</h3>
+                        <p class="proj-subtitle">Short Subtitle</p>
+                        <p class="proj-desc">
+                            Your project description goes here.
+                        </p>
+                        <div class="proj-tags">
+                            <span>Tech 1</span>
+                            <span>Tech 2</span>
+                        </div>
+                        <div class="proj-links">
+                            <a href="#" target="_blank" class="proj-link proj-link--primary">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" target="_blank" class="proj-link proj-link--ghost">GitHub <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="proj-shine" aria-hidden="true"></div>
+                </div>
+                ─────────────────────────────────────────── -->
+
+            </div>
+        </div>
+    </section>
+    <!-- ── END PROJECTS ───────────────────────────────────── -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         ██  SECTION 6 — EDUCATION
+    ══════════════════════════════════════════════════════════ -->
+    <section id="education" class="section education-section">
+        <div class="container">
+
+            <div class="section-header">
+                <span class="section-eyebrow">05 — Education</span>
+                <h2 class="section-title">Academic Background</h2>
+            </div>
+
+            <!-- ── EDUCATION CARDS ───────────────────────────
+                 Arranged as journey timeline (newest to oldest)
+                 To add a degree/school: duplicate a .edu-card block.
+                 To remove: delete the .edu-card block.
+            ─────────────────────────────────────────────── -->
+            <div class="edu-grid">
+
+                <!-- Education Card 1 — B.Tech (Current) -->
+                <div class="edu-card edu-card--active" data-reveal>
+                    <div class="edu-card__marker"></div>
+                    <div class="edu-card__top">
+                        <!-- Year / Duration -->
+                        <span class="edu-year">2024 – 2028 (Expected)</span>
+                        <!-- Degree name -->
+                        <h3 class="edu-degree">B.Tech — Computer Science (Data Science)</h3>
+                        <!-- Institution -->
+                        <p class="edu-institution">
+                            <i class="fas fa-university"></i>
+                            United Institute of Technology, Prayagraj
+                        </p>
+                    </div>
+                    <div class="edu-card__bottom">
+                        <!-- Any highlights, specialization, notes -->
+                        <p class="edu-note">Specialized in Data Science. Currently in 3rd Semester — SGPA: 7.7. Actively building projects integrating AI, mobile development, and full-stack web engineering.</p>
+                        <!-- Status badge -->
+                        <span class="edu-badge edu-badge--active">Currently Enrolled</span>
+                    </div>
+                </div>
+
+                <!-- Education Card 2 — 12th Standard -->
+                <div class="edu-card edu-card--milestone" data-reveal>
+                    <div class="edu-card__marker"></div>
+                    <div class="edu-card__top">
+                        <!-- Year / Duration -->
+                        <span class="edu-year">Completed</span>
+                        <!-- Degree name -->
+                        <h3 class="edu-degree">12th Standard (PCM)</h3>
+                        <!-- Institution -->
+                        <p class="edu-institution">
+                            <i class="fas fa-school"></i>
+                            Boy's High School, Prayagraj
+                        </p>
+                    </div>
+                    <div class="edu-card__bottom">
+                        <!-- Any highlights, specialization, notes -->
+                        <p class="edu-note">Specialized in Physics, Chemistry, and Mathematics stream.</p>
+                        <!-- Status badge -->
+                        <span class="edu-badge edu-badge--accent">Percentage: 61%</span>
+                    </div>
+                </div>
+
+                <!-- Education Card 3 — 10th Standard -->
+                <div class="edu-card edu-card--milestone" data-reveal>
+                    <div class="edu-card__marker"></div>
+                    <div class="edu-card__top">
+                        <!-- Year / Duration -->
+                        <span class="edu-year">Completed</span>
+                        <!-- Degree name -->
+                        <h3 class="edu-degree">10th Standard</h3>
+                        <!-- Institution -->
+                        <p class="edu-institution">
+                            <i class="fas fa-school"></i>
+                            Boy's High School, Prayagraj
+                        </p>
+                    </div>
+                    <div class="edu-card__bottom">
+                        <!-- Any highlights, specialization, notes -->
+                        <p class="edu-note">Foundation in core sciences and mathematics.</p>
+                        <!-- Status badge -->
+                        <span class="edu-badge edu-badge--success">Percentage: 80%</span>
+                    </div>
+                </div>
+
+                <!-- ── TEMPLATE: Copy to add more ────────────
+                <div class="edu-card" data-reveal>
+                    <div class="edu-card__top">
+                        <span class="edu-year">Year</span>
+                        <h3 class="edu-degree">Degree Name</h3>
+                        <p class="edu-institution">
+                            <i class="fas fa-university"></i>
+                            Institution Name
+                        </p>
+                    </div>
+                    <div class="edu-card__bottom">
+                        <p class="edu-note">Any notes or achievements here.</p>
+                        <span class="edu-badge">Score: XX%</span>
+                    </div>
+                </div>
+                ─────────────────────────────────────────── -->
+
+            </div>
+        </div>
+    </section>
+    <!-- ── END EDUCATION ──────────────────────────────────── -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         ██  SECTION 7 — CERTIFICATIONS
+    ══════════════════════════════════════════════════════════ -->
+    <section id="certifications" class="section certs-section">
+        <div class="container">
+
+            <div class="section-header">
+                <span class="section-eyebrow">06 — Certifications</span>
+                <h2 class="section-title">Credentials &amp; Learning</h2>
+            </div>
+
+            <!-- ── CERTIFICATION CARDS ───────────────────────
+                 To add a cert: duplicate a .cert-card block.
+                 To add a verification link: uncomment and fill the <a> tag.
+            ─────────────────────────────────────────────── -->
+            <div class="certs-grid">
+
+                <!-- Cert 1 — AI Productivity -->
+                <div class="cert-card" data-reveal>
+                    <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                    <div class="cert-body">
+                        <!-- Certificate Title -->
+                        <h3 class="cert-title">Advanced AI Productivity &amp; Tooling</h3>
+                        <!-- Issuing Organization -->
+                        <p class="cert-issuer">
+                            <i class="fas fa-award"></i> Be10x
+                        </p>
+                        <!-- Date Issued -->
+                        <span class="cert-date">June 2025</span>
+                        <!-- Description -->
+                        <p class="cert-desc">Mastering AI-driven development workflows, prompt engineering, and integrating automation tools to accelerate software delivery cycles.</p>
+                        <!-- Uncomment and add link once you have a certificate URL:
+                        <a href="YOUR_CERT_URL" target="_blank" class="cert-verify">
+                            Verify Certificate <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        -->
+                    </div>
+                </div>
+
+                <!-- Cert 2 — Python -->
+                <div class="cert-card" data-reveal>
+                    <div class="cert-icon"><i class="fab fa-python"></i></div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">Python for Rapid Prototyping &amp; Engineering</h3>
+                        <p class="cert-issuer">
+                            <i class="fas fa-award"></i> Be10x
+                        </p>
+                        <span class="cert-date">July 2025</span>
+                        <p class="cert-desc">Intensive workshop on Python application logic — writing clean, optimized code for data-driven projects and back-end integration.</p>
+                    </div>
+                </div>
+
+                <!-- ── TEMPLATE: Copy to add more ────────────
+                <div class="cert-card" data-reveal>
+                    <div class="cert-icon"><i class="fas fa-ICON"></i></div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">Certification Title</h3>
+                        <p class="cert-issuer"><i class="fas fa-award"></i> Issuer Name</p>
+                        <span class="cert-date">Month Year</span>
+                        <p class="cert-desc">Short description of what the cert covers.</p>
+                    </div>
+                </div>
+                ─────────────────────────────────────────── -->
+
+            </div>
+        </div>
+    </section>
+    <!-- ── END CERTIFICATIONS ─────────────────────────────── -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         ██  SECTION 8 — ACHIEVEMENTS
+    ══════════════════════════════════════════════════════════ -->
+    <section id="achievements" class="section achievements-section">
+        <div class="container">
+
+            <div class="section-header">
+                <span class="section-eyebrow">07 — Achievements</span>
+                <h2 class="section-title">Milestones &amp; Highlights</h2>
+            </div>
+
+            <!-- ── ACHIEVEMENT CARDS ─────────────────────────
+                 Replace placeholder content with your real achievements.
+                 To add one: duplicate a .achieve-card block.
+                 To change the icon: update the fa- class in .achieve-icon
+            ─────────────────────────────────────────────── -->
+            <div class="achieve-grid">
+
+                <!-- Achievement 1 -->
+                <div class="achieve-card" data-reveal>
+                    <div class="achieve-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="achieve-body">
+                        <!-- Year -->
+                        <span class="achieve-year">2026 (Expected)</span>
+                        <!-- Title of the achievement -->
+                        <h3 class="achieve-title">Launched SAGE — Mobile Learning Platform</h3>
+                        <!-- Short description -->
+                        <p class="achieve-desc">Conceptualized and began development of SAGE, an AI-driven scenario-based mobile learning platform aimed at transforming passive content consumption.</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="achieve-card" data-reveal>
+                    <div class="achieve-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="achieve-body">
+                        <span class="achieve-year">2025</span>
+                        <h3 class="achieve-title">Dual Certification in AI &amp; Python</h3>
+                        <p class="achieve-desc">Completed two advanced technical certifications from Be10x within a month — demonstrating rapid skill acquisition in AI tooling and Python engineering.</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="achieve-card" data-reveal>
+                    <div class="achieve-icon"><i class="fas fa-code-branch"></i></div>
+                    <div class="achieve-body">
+                        <span class="achieve-year">2026 (Expected)</span>
+                        <h3 class="achieve-title">Built PathEd Ecosystem from Scratch</h3>
+                        <p class="achieve-desc">Designed and developed a full educational ecosystem with recruiter-student matching and dynamic academic roadmaps as a solo engineering effort.</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 4 -->
+                <div class="achieve-card" data-reveal>
+                    <div class="achieve-icon"><i class="fas fa-flask"></i></div>
+                    <div class="achieve-body">
+                        <span class="achieve-year">2025</span>
+                        <h3 class="achieve-title">Completed Python for Data Science Training</h3>
+                        <p class="achieve-desc">Successfully completed a university-level summer training program in Python for Data Science, applying skills directly to real engineering projects.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ── END ACHIEVEMENTS ───────────────────────────────── -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         ██  SECTION 9 — CONTACT
+    ══════════════════════════════════════════════════════════ -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+
+            <div class="section-header">
+                <span class="section-eyebrow">08 — Contact</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <!-- Subtitle under the heading -->
+                <p class="contact-subtitle">
+                    Whether it's a project, collaboration, or just a conversation — I'd love to hear from you.
+                </p>
+            </div>
+
+            <div class="contact-layout">
+
+                <!-- Left: Info Cards -->
+                <div class="contact-info">
+
+                    <!-- ── CONTACT INFO CARDS ────────────────
+                         Update href and text for each method.
+                         To add a new method: duplicate a .contact-card block.
+                    ─────────────────────────────────────────── -->
+
+                    <!-- Email Card -->
+                    <a href="mailto:r.a.kushwaha005@gmail.com" class="contact-card" aria-label="Email">
+                        <div class="contact-card__icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-card__body">
+                            <span class="contact-card__label">Email</span>
+                            <!-- Update email address here -->
+                            <span class="contact-card__value">r.a.kushwaha005@gmail.com</span>
+                        </div>
+                        <i class="fas fa-arrow-right contact-card__arrow"></i>
+                    </a>
+
+                    <!-- LinkedIn Card -->
+                    <a href="https://www.linkedin.com/in/rahul-kushwaha-7698b3368" target="_blank" rel="noopener" class="contact-card" aria-label="LinkedIn">
+                        <div class="contact-card__icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="contact-card__body">
+                            <span class="contact-card__label">LinkedIn</span>
+                            <span class="contact-card__value">rahul-kushwaha-7698b3368</span>
+                        </div>
+                        <i class="fas fa-arrow-right contact-card__arrow"></i>
+                    </a>
+
+                    <!-- GitHub Card -->
+                    <a href="https://github.com/Dominus005era" target="_blank" rel="noopener" class="contact-card" aria-label="GitHub">
+                        <div class="contact-card__icon"><i class="fab fa-github"></i></div>
+                        <div class="contact-card__body">
+                            <span class="contact-card__label">GitHub</span>
+                            <span class="contact-card__value">Dominus005era</span>
+                        </div>
+                        <i class="fas fa-arrow-right contact-card__arrow"></i>
+                    </a>
+
+                </div>
+
+                <!-- Right: Contact Form -->
+                <div class="contact-form-wrap" data-reveal>
+                    <!-- ── CONTACT FORM ───────────────────────
+                         Currently shows a success message on submit.
+                         To connect to a real backend or email service:
+                           Option A: Use Formspree.io — change action="https://formspree.io/f/YOUR_ID"
+                           Option B: See script.js → initContactForm() to add
+                                     your own API/Telegram bot logic.
+                         Do NOT change the name="" attributes on inputs —
+                         they are used by script.js to read the values.
+                    ─────────────────────────────────────────── -->
+                    <form class="contact-form" id="contactForm" novalidate>
+
+                        <div class="form-row">
+                            <!-- Name Field -->
+                            <div class="form-group">
+                                <label for="contactName">Your Name</label>
+                                <input
+                                    type="text"
+                                    id="contactName"
+                                    name="name"
+                                    placeholder="Rahul Kushwaha"
+                                    required
+                                    autocomplete="name"
+                                />
+                                <span class="form-error" id="nameError"></span>
+                            </div>
+                            <!-- Email Field -->
+                            <div class="form-group">
+                                <label for="contactEmail">Your Email</label>
+                                <input
+                                    type="email"
+                                    id="contactEmail"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    required
+                                    autocomplete="email"
+                                />
+                                <span class="form-error" id="emailError"></span>
+                            </div>
+                        </div>
+
+                        <!-- Subject Field -->
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <input
+                                type="text"
+                                id="contactSubject"
+                                name="subject"
+                                placeholder="Project Collaboration / Opportunity"
+                                required
+                            />
+                            <span class="form-error" id="subjectError"></span>
+                        </div>
+
+                        <!-- Message Field -->
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea
+                                id="contactMessage"
+                                name="message"
+                                rows="5"
+                                placeholder="Tell me about your project or idea..."
+                                required
+                            ></textarea>
+                            <span class="form-error" id="messageError"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <i class="fas fa-paper-plane btn-icon"></i>
+                        </button>
+
+                        <!-- Status message (success/error) — filled by script.js -->
+                        <div class="form-status" id="formStatus" aria-live="polite"></div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ── END CONTACT ─────────────────────────────────────── -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         IMAGE GALLERY MODAL
+         Displayed when preview button is clicked on a project.
+    ══════════════════════════════════════════════════════════ -->
+    <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-overlay" onclick="closeGallery()"></div>
+        <div class="gallery-container">
+            <!-- Close Button -->
+            <button class="gallery-close" onclick="closeGallery()" aria-label="Close gallery">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Main Image -->
+            <div class="gallery-main">
+                <img src="" alt="Gallery preview" id="galleryMainImage" class="gallery-image">
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="gallery-controls">
+                <!-- Previous Button -->
+                <button class="gallery-nav gallery-nav--prev" onclick="prevGalleryImage()" aria-label="Previous image">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <!-- Image Counter -->
+                <span class="gallery-counter">
+                    <span id="galleryCurrentIndex">1</span> / <span id="galleryTotalImages">3</span>
+                </span>
+
+                <!-- Next Button -->
+                <button class="gallery-nav gallery-nav--next" onclick="nextGalleryImage()" aria-label="Next image">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="gallery-thumbnails" id="galleryThumbnails">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ──────────────────────────────────────────────────── -->
+
+
+    <!-- ──────────────────────────────────────────────────── -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+
+            <!-- Left: Name + Tagline -->
+            <div class="footer-brand">
+                <!-- Change to your name -->
+                <span class="footer-logo">RK<span class="logo-accent">.</span></span>
+                <p class="footer-tagline">Engineering the future of intelligent learning.</p>
+            </div>
+
+            <!-- Center: Footer Nav Links -->
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <!-- Right: Social Icons -->
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/rahul-kushwaha-7698b3368" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Dominus005era"                    target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://leetcode.com/u/tULNEGtHUu/"                  target="_blank" rel="noopener" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+            </div>
+
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <!-- Update year as needed -->
+                <p>&copy; 2025 Rahul Kushwaha. Built with passion.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ── END FOOTER ─────────────────────────────────────── -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SCRIPTS
+         Loaded at bottom of body for best performance.
+         script.js controls all animations & interactions.
+    ══════════════════════════════════════════════════════════ -->
+    <script src="script.js"></script>
+
+</body>
+</html>
