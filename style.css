@@ -3127,6 +3127,52 @@ strong { color: var(--color-accent); font-weight: 600; }
     border-radius: 6px;
 }
 
+/* ── Research Paper Disclaimer & Early Information Banners ── */
+.research-disclaimer-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-left: 4px solid #f59e0b;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+}
+.research-disclaimer-card .disclaimer-icon {
+    font-size: 1.4rem;
+    color: #f59e0b;
+    margin-top: 0.1rem;
+}
+.research-disclaimer-card .disclaimer-text {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--color-text);
+}
+.research-disclaimer-card .disclaimer-text strong {
+    color: #f59e0b;
+}
+
+.paper-disclaimer-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin: 1rem 0 1.5rem 0;
+    font-size: 0.84rem;
+    line-height: 1.5;
+    color: var(--color-text);
+}
+.paper-disclaimer-banner i {
+    font-size: 1.1rem;
+    color: #f59e0b;
+    flex-shrink: 0;
+}
+
 /* ── About Research Section Additions ──────────────────────── */
 .about-role-title {
     font-size: 1.15rem;

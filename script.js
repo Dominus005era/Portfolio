@@ -1462,6 +1462,13 @@ function openResearchPaper(paperId) {
             </div>
         </div>
 
+        <div class="paper-disclaimer-banner">
+            <i class="fas fa-info-circle"></i>
+            <div>
+                <strong>Independent Key Findings Notice (Unpublished Report):</strong> This paper contains personal research notes, key findings, and architectural analyses authored by Rahul Kushwaha. <em>It has not been published in any official academic journal or peer-reviewed conference.</em>
+            </div>
+        </div>
+
         <div class="paper-abstract-box">
             <h4><i class="fas fa-file-contract"></i> Abstract</h4>
             <p>${paper.abstract}</p>
