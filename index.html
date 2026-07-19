@@ -116,8 +116,9 @@
                     <li><a href="#hero"           class="nav-link">Home</a></li>
                     <li><a href="#about"          class="nav-link">About</a></li>
                     <li><a href="#projects"       class="nav-link">Projects</a></li>
+                    <li><a href="#collaboration"  class="nav-link">Collaborate</a></li>
                     <li><a href="#mission"        class="nav-link">Mission</a></li>
-                    <li><a href="blog.html"          class="nav-link">Personal Blog</a></li>
+                    <li><a href="blog.html"       class="nav-link">Personal Blog</a></li>
                     <!-- ── CONTACT BUTTON — styled differently ── -->
                     <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
                 </ul>
@@ -1184,73 +1185,225 @@
 
 
     <!-- ══════════════════════════════════════════════════════
-         ██  SECTION 7 — CERTIFICATIONS
+         ██  SECTION 7 — HOW I CAN COLLABORATE (BENTO GRID)
     ══════════════════════════════════════════════════════════ -->
-    <section id="certifications" class="section certs-section">
+    <section id="collaboration" class="section collaboration-section">
         <div class="container">
 
-            <div class="section-header">
-                <span class="section-eyebrow">06 — Certifications</span>
-                <h2 class="section-title">Credentials &amp; Learning</h2>
+            <div class="section-header" data-reveal style="text-align: center; margin-bottom: 3.5rem;">
+                <span class="section-eyebrow">06 — Collaboration Matrix</span>
+                <h2 class="section-title">How I Can Collaborate</h2>
+                <p class="section-subtitle" style="max-width: 750px; margin: 0.5rem auto 0 auto;">
+                    Empowering student developers, open-source communities, and research teams with robust AI scaffolding, micro-learning frameworks, and full-stack software architectures.
+                </p>
             </div>
 
-            <!-- ── CERTIFICATION CARDS ───────────────────────
-                 To add a cert: duplicate a .cert-card block.
-                 To add a verification link: uncomment and fill the <a> tag.
-            ─────────────────────────────────────────────── -->
-            <div class="certs-grid">
+            <!-- Bento Grid Layout -->
+            <div class="bento-grid">
 
-                <!-- Cert 1 — AI Productivity -->
-                <div class="cert-card" data-reveal>
-                    <div class="cert-icon"><i class="fas fa-robot"></i></div>
-                    <div class="cert-body">
-                        <!-- Certificate Title -->
-                        <h3 class="cert-title">Advanced AI Productivity &amp; Tooling</h3>
-                        <!-- Issuing Organization -->
-                        <p class="cert-issuer">
-                            <i class="fas fa-award"></i> Be10x
+                <!-- Card 1: AI Micro-Learning & Socratic Tutors (Featured / Blue Theme) -->
+                <div class="bento-card bento-theme-blue col-span-2" data-reveal>
+                    <div class="bento-header">
+                        <div class="bento-icon"><i class="fas fa-brain"></i></div>
+                        <span class="bento-badge">AI Systems</span>
+                    </div>
+                    <div class="bento-content">
+                        <div class="bento-metric">5+ AI Platforms Built</div>
+                        <h3>AI Micro-Learning &amp; Socratic Tutoring Systems</h3>
+                        <p class="bento-intro">
+                            Collaborating on AI-driven educational software, integrating Gemini 3 Flash and Gemini 2.0 Flash models with Socratic prompt guardrails to guide student reasoning without hallucination or direct answer regurgitation.
                         </p>
-                        <!-- Date Issued -->
-                        <span class="cert-date">June 2025</span>
-                        <!-- Description -->
-                        <p class="cert-desc">Mastering AI-driven development workflows, prompt engineering, and integrating automation tools to accelerate software delivery cycles.</p>
-                        <!-- Uncomment and add link once you have a certificate URL:
-                        <a href="YOUR_CERT_URL" target="_blank" class="cert-verify">
-                            Verify Certificate <i class="fas fa-external-link-alt"></i>
-                        </a>
-                        -->
+                        <div class="bento-subgrid">
+                            <div class="bento-subbox">
+                                <div class="subbox-icon"><i class="fas fa-sitemap"></i></div>
+                                <div class="subbox-text">
+                                    <h4>Scenario Micro-Scaffolding</h4>
+                                    <p>Designing interactive decision trees using Cognitive Load Theory (Sweller, 1988).</p>
+                                </div>
+                            </div>
+                            <div class="bento-subbox">
+                                <div class="subbox-icon"><i class="fas fa-robot"></i></div>
+                                <div class="subbox-text">
+                                    <h4>Socratic AI Tutors</h4>
+                                    <p>Constrained LLM completions prompting critical thinking in CogniPath &amp; SAGE.</p>
+                                </div>
+                            </div>
+                            <div class="bento-subbox">
+                                <div class="subbox-icon"><i class="fas fa-history"></i></div>
+                                <div class="subbox-text">
+                                    <h4>Spaced Repetition &amp; ZPD</h4>
+                                    <p>Algorithms calculating optimal review timing within Vygotsky's ZPD zone.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bento-tags">
+                            <span class="bento-tag">Gemini 3 Flash API</span>
+                            <span class="bento-tag">Socratic AI Guardrails</span>
+                            <span class="bento-tag">CogniPath 9-Chapters</span>
+                            <span class="bento-tag">SAGE Micro-Scaffolding</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Cert 2 — Python -->
-                <div class="cert-card" data-reveal>
-                    <div class="cert-icon"><i class="fab fa-python"></i></div>
-                    <div class="cert-body">
-                        <h3 class="cert-title">Python for Rapid Prototyping &amp; Engineering</h3>
-                        <p class="cert-issuer">
-                            <i class="fas fa-award"></i> Be10x
+                <!-- Card 2: Full-Stack & Cross-Platform (Purple Theme) -->
+                <div class="bento-card bento-theme-purple" data-reveal>
+                    <div class="bento-header">
+                        <div class="bento-icon"><i class="fas fa-laptop-code"></i></div>
+                        <span class="bento-badge">Full-Stack &amp; Apps</span>
+                    </div>
+                    <div class="bento-content">
+                        <div class="bento-metric">React 19 • Vite 6 • Express</div>
+                        <h3>Full-Stack &amp; Cross-Platform Apps</h3>
+                        <p class="bento-intro">
+                            Architecting modern web apps and mobile interfaces, scaling from rapid prototypes to live production deployments on Vercel and Firebase Cloud Firestore.
                         </p>
-                        <span class="cert-date">July 2025</span>
-                        <p class="cert-desc">Intensive workshop on Python application logic — writing clean, optimized code for data-driven projects and back-end integration.</p>
+                        <div class="bento-subgrid">
+                            <div class="bento-subbox">
+                                <div class="subbox-icon"><i class="fab fa-react"></i></div>
+                                <div class="subbox-text">
+                                    <h4>React 19 &amp; Vite 6</h4>
+                                    <p>Sub-16ms render loops, Tailwind v4 styling, and Framer Motion UI.</p>
+                                </div>
+                            </div>
+                            <div class="bento-subbox">
+                                <div class="subbox-icon"><i class="fas fa-server"></i></div>
+                                <div class="subbox-text">
+                                    <h4>Express &amp; Node.js</h4>
+                                    <p>RESTful APIs, multi-model fallback chains, and Firebase Cloud sync.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bento-tags">
+                            <span class="bento-tag">React 19</span>
+                            <span class="bento-tag">TypeScript 5.8</span>
+                            <span class="bento-tag">Vite 6</span>
+                            <span class="bento-tag">Firebase v12</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- ── TEMPLATE: Copy to add more ────────────
-                <div class="cert-card" data-reveal>
-                    <div class="cert-icon"><i class="fas fa-ICON"></i></div>
-                    <div class="cert-body">
-                        <h3 class="cert-title">Certification Title</h3>
-                        <p class="cert-issuer"><i class="fas fa-award"></i> Issuer Name</p>
-                        <span class="cert-date">Month Year</span>
-                        <p class="cert-desc">Short description of what the cert covers.</p>
+                <!-- Card 3: Gamified EdTech & High-Stakes Retrieval (Gold Theme) -->
+                <div class="bento-card bento-theme-gold" data-reveal>
+                    <div class="bento-header">
+                        <div class="bento-icon"><i class="fas fa-trophy"></i></div>
+                        <span class="bento-badge">Gamified EdTech</span>
+                    </div>
+                    <div class="bento-content">
+                        <div class="bento-metric">KBS Quiz • 17-Crore Jackpot</div>
+                        <h3>Gamified Learning &amp; Retrieval Practice</h3>
+                        <p class="bento-intro">
+                            Engineering high-stakes assessment platforms (like KBS Educational Quiz System) with authentic 15-level points progression, lifelines, rapid-fire bonus rounds, and AI report cards.
+                        </p>
+                        <div class="bento-subgrid">
+                            <div class="bento-subbox">
+                                <div class="subbox-icon"><i class="fas fa-stopwatch"></i></div>
+                                <div class="subbox-text">
+                                    <h4>High-Stakes Retrieval</h4>
+                                    <p>Timed arousal pressure consolidating long-term memory schemas.</p>
+                                </div>
+                            </div>
+                            <div class="bento-subbox">
+                                <div class="subbox-icon"><i class="fas fa-file-invoice"></i></div>
+                                <div class="subbox-text">
+                                    <h4>AI Teacher Report Cards</h4>
+                                    <p>Gemini AI evaluating student performance, speed, and accuracy.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bento-tags">
+                            <span class="bento-tag">KBS Quiz Engine</span>
+                            <span class="bento-tag">Testing Effect</span>
+                            <span class="bento-tag">Lifeline Mechanics</span>
+                            <span class="bento-tag">Offline Caching</span>
+                        </div>
                     </div>
                 </div>
-                ─────────────────────────────────────────── -->
+
+                <!-- Card 4: Academic Data Science & Telemetry (Cyan Theme) -->
+                <div class="bento-card bento-theme-cyan" data-reveal>
+                    <div class="bento-header">
+                        <div class="bento-icon"><i class="fas fa-chart-line"></i></div>
+                        <span class="bento-badge">Data &amp; Vision</span>
+                    </div>
+                    <div class="bento-content">
+                        <div class="bento-metric">Python • OpenCV • OCR</div>
+                        <h3>Data Analytics &amp; Educational Data Mining</h3>
+                        <p class="bento-intro">
+                            Applying statistical models, computer vision (OpenCV face recognition), and interaction telemetry to quantify learner focus, study momentum, and attendance metrics.
+                        </p>
+                        <div class="bento-subgrid">
+                            <div class="bento-subbox">
+                                <div class="subbox-icon"><i class="fas fa-eye"></i></div>
+                                <div class="subbox-text">
+                                    <h4>Multimodal Vision &amp; OCR</h4>
+                                    <p>ScholarPulse screenshot attendance parsing and calendar date extraction.</p>
+                                </div>
+                            </div>
+                            <div class="bento-subbox">
+                                <div class="subbox-icon"><i class="fas fa-user-check"></i></div>
+                                <div class="subbox-text">
+                                    <h4>Biometric Verification</h4>
+                                    <p>Deep learning face recognition pipelines built with OpenCV &amp; Python.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bento-tags">
+                            <span class="bento-tag">Python</span>
+                            <span class="bento-tag">OpenCV Vision</span>
+                            <span class="bento-tag">ScholarPulse OCR</span>
+                            <span class="bento-tag">Focus Telemetry</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Open-Source & Independent EdTech Research (Green Theme, Full Width) -->
+                <div class="bento-card bento-theme-green col-span-3" data-reveal>
+                    <div class="bento-header">
+                        <div class="bento-icon"><i class="fas fa-flask"></i></div>
+                        <span class="bento-badge">Research &amp; Community</span>
+                    </div>
+                    <div class="bento-content">
+                        <div class="bento-metric">7 Independent Technical Reports</div>
+                        <h3>EdTech Research &amp; Open Source Collaboration</h3>
+                        <p class="bento-intro">
+                            Partnering with student developers, academic peers, and open-source communities to advance human-centered learning software, document cognitive research findings, and foster collaborative tech innovation.
+                        </p>
+                        <div class="bento-subgrid">
+                            <div class="bento-subbox">
+                                <div class="subbox-icon"><i class="fas fa-book-open"></i></div>
+                                <div class="subbox-text">
+                                    <h4>Research Reports &amp; Whitepapers</h4>
+                                    <p>Formulating technical documentation on Cognitive Load Theory and AI Socratic guardrails.</p>
+                                </div>
+                            </div>
+                            <div class="bento-subbox">
+                                <div class="subbox-icon"><i class="fas fa-users"></i></div>
+                                <div class="subbox-text">
+                                    <h4>Peer Developer Mentorship</h4>
+                                    <p>Co-building projects and sharing architectural knowledge with student developers.</p>
+                                </div>
+                            </div>
+                            <div class="bento-subbox">
+                                <div class="subbox-icon"><i class="fas fa-code-branch"></i></div>
+                                <div class="subbox-text">
+                                    <h4>Open Tech Philosophy</h4>
+                                    <p>Building 100% open-access educational tools designed for community impact.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bento-tags">
+                            <span class="bento-tag">Independent EdTech Research</span>
+                            <span class="bento-tag">7 Technical Reports</span>
+                            <span class="bento-tag">Peer Collaboration</span>
+                            <span class="bento-tag">Open Source Stack</span>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
     </section>
-    <!-- ── END CERTIFICATIONS ─────────────────────────────── -->
+    <!-- ── END HOW I CAN COLLABORATE ───────────────────────── -->
 
 
     <!-- ══════════════════════════════════════════════════════
