@@ -1232,16 +1232,16 @@ const PROJECT_BREAKDOWNS = {
         demo: "https://scholarpulse-elite.vercel.app"
     },
     elitekbc: {
-        title: "KBC Educational Quiz System (Elite KBC)",
+        title: "KBS Educational Quiz System (Elite KBS)",
         tagline: "Gemini 3.5 Flash AI Gamified Quiz Platform (Class 1–12)",
-        overview: "An authentic Kaun Banega Crorepati quiz engine powered by Gemini 3.5 Flash AI. Generates grade-aligned questions in real time with 4 lifelines, a 10-Crore Super Bonus round, and AI teacher report cards.",
-        backstory: "Built to make K-12 learning engaging through active recall and high-stakes gamification. Leverages Gemini 3.5 Flash to automatically generate syllabus-tailored questions for Class 1 to 12 across Science, Mathematics, History, and GK.",
-        architecture: "Built with React 19, TypeScript 5.8, Vite 6, Tailwind CSS v4, Framer Motion v12, Express, and Gemini 3.5 Flash AI API.",
+        overview: "An authentic Kaun Banega Crorepati (KBS) style quiz engine powered by Gemini 3.5 Flash AI. Generates grade-aligned questions in real time with 4 lifelines, a 10-Crore Super Bonus round, intelligent quiz caching, and AI teacher report cards.",
+        backstory: "Built to make K-12 learning engaging through active recall and high-stakes gamification. Leverages Gemini 3.5 Flash to automatically generate syllabus-tailored questions for Class 1 to 12 across Science, Mathematics, History, and GK with intelligent local caching for offline fallbacks.",
+        architecture: "Built with React 19, TypeScript 5.8, Vite 6, Tailwind CSS v4, Framer Motion v12, Express server, and Gemini 3.5 Flash AI API.",
         features: [
-            "Real-Time Gemini 3.5 Flash AI Question Generator",
-            "Authentic 15-Level KBC Points (7 Crores Jackpot)",
-            "4 Lifelines (50:50, Double Dip, Flip, Ask AI Expert)",
-            "Super Bonus Round (10-Crore Extra Points, Max 17 Crores)",
+            "Real-Time Gemini 3.5 Flash AI Question Generator & Intelligent Local Caching",
+            "Authentic 15-Level KBS Points Progression (7 Crores Jackpot & Safe Zones)",
+            "4 Lifelines (50:50, Double Dip, Flip the Question, Ask AI Expert)",
+            "Super Bonus Round (Rapid-Fire Science/GK Facts adding 10-Crore Extra Points, Max 17 Crores)",
             "Gemini AI Personalized Teacher Report Cards",
             "Bilingual Hindi (Devanagari) & English Support"
         ],
@@ -1344,10 +1344,10 @@ const RESEARCH_PAPERS = {
         role: "AI Developer & EdTech Researcher",
         affiliation: "United Institute of Technology / Independent EdTech Research Group",
         journal: "Personal Paper Report • AI4ED & Human-AI Interaction",
-        projects: "CogniPath, KBC Educational Quiz System, & SAGE (Version 2)",
-        abstract: "While Large Language Models (LLMs) possess vast knowledge representations, using them directly as educational tutors introduces severe risks of content hallucination and over-scaffolding (providing direct answers rather than prompting critical thinking). This paper presents a Socratic prompt engineering framework implemented in CogniPath and KBC Quiz System that enforces guided questioning, encouraging students to construct knowledge independently.",
+        projects: "CogniPath, KBS Educational Quiz System, & SAGE (Version 2)",
+        abstract: "While Large Language Models (LLMs) possess vast knowledge representations, using them directly as educational tutors introduces severe risks of content hallucination and over-scaffolding (providing direct answers rather than prompting critical thinking). This paper presents a Socratic prompt engineering framework implemented in CogniPath and KBS Quiz System that enforces guided questioning, encouraging students to construct knowledge independently.",
         introduction: "Effective human tutoring relies on Socratic dialogue—asking targeted questions that expose gaps in student reasoning. Standard LLM completions tend to solve problems directly, depriving the student of cognitive effort necessary for schema formation. This research outlines a constrained system architecture enforcing Socratic interaction.",
-        methodology: "We designed a multi-agent prompt system where an Evaluator Module parses student input against a domain knowledge graph. The Response Engine inside CogniPath and KBC Quiz System is constrained to emit counter-questions and hints rather than direct solutions, maintaining dialogue within the Zone of Proximal Development.",
+        methodology: "We designed a multi-agent prompt system where an Evaluator Module parses student input against a domain knowledge graph. The Response Engine inside CogniPath and KBS Quiz System is constrained to emit counter-questions and hints rather than direct solutions, maintaining dialogue within the Zone of Proximal Development.",
         conclusion: "Constrained Socratic LLM architectures eliminate direct answer regurgitation while improving student problem-solving autonomy. This model serves as the foundation for Next-Gen Intelligent Tutoring Systems (ITS).",
         references: [
             "Vaswani, A., et al. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30.",
@@ -1362,15 +1362,15 @@ const RESEARCH_PAPERS = {
         role: "AI Developer & EdTech Researcher",
         affiliation: "United Institute of Technology / Independent EdTech Research Group",
         journal: "Personal Paper Report • Gamification & Retrieval Practice",
-        projects: "KBC Educational Quiz System, CogniPath, & SAGE (Version 2)",
+        projects: "KBS Educational Quiz System, CogniPath, & SAGE (Version 2)",
         abstract: "Retrieval practice—actively recalling information from memory—is dramatically more effective for long-term retention than passive restudying (Roediger & Karpicke, 2006). This research evaluates how high-stakes game show mechanics (Kaun Banega Crorepati lifelines, time limits, synthesized audio cues) and EXP streaks induce beneficial cognitive arousal that consolidates memory nodes.",
-        introduction: "Most quiz applications use low-stakes multiple choice formats that fail to induce optimal emotional arousal. By studying the cognitive mechanics of high-stakes television games, I formulated a software framework that simulates authentic test-taking pressures inside KBC Quiz System, CogniPath, and SAGE.",
-        methodology: "We engineered KBC Quiz System using React 19, TypeScript, and Gemini 3.5 Flash AI. We introduced dynamic lifeline choices (50:50, Double Dip, Flip, Ask AI Expert) and 10-Question Super Bonus rounds to force meta-cognitive self-assessment under strict time constraints. Learner response confidence was recorded across 1,000+ trials.",
+        introduction: "Most quiz applications use low-stakes multiple choice formats that fail to induce optimal emotional arousal. By studying the cognitive mechanics of high-stakes television games, I formulated a software framework that simulates authentic test-taking pressures inside KBS Quiz System, CogniPath, and SAGE.",
+        methodology: "We engineered KBS Quiz System using React 19, TypeScript, and Gemini 3.5 Flash AI. We introduced dynamic lifeline choices (50:50, Double Dip, Flip, Ask AI Expert) and 10-Question Super Bonus rounds to force meta-cognitive self-assessment under strict time constraints. Learner response confidence was recorded across 1,000+ trials.",
         conclusion: "Simulated high-stakes retrieval significantly reduces exam anxiety while improving rapid information retrieval. Emotional arousal coupled with immediate feedback creates durable memory schemas.",
         references: [
             "Roediger, H. L., & Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological Science, 17(3), 249-255.",
             "Bjork, E. L., & Bjork, R. A. (2011). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning. Psychology and the Real World, 56-64.",
-            "Kushwaha, R. (2026). KBC Quiz System: Psychological Mechanics of High-Stakes Retrieval. Cognitive EdTech Reports."
+            "Kushwaha, R. (2026). KBS Quiz System: Psychological Mechanics of High-Stakes Retrieval. Cognitive EdTech Reports."
         ]
     },
     4: {
@@ -1430,8 +1430,8 @@ const RESEARCH_PAPERS = {
         role: "AI Developer & EdTech Researcher",
         affiliation: "United Institute of Technology / Independent EdTech Research Group",
         journal: "Personal Paper Report • Responsible AI & EdTech Ethics",
-        projects: "SAGE, CogniPath, ScholarPulse, KBC Quiz System, & PathEd",
-        abstract: "As Artificial Intelligence becomes deeply integrated into educational platforms, ensuring student cognitive autonomy is paramount. Algorithms must not create passive dependence on AI systems. Synthesizing insights across SAGE, CogniPath, ScholarPulse, KBC Quiz System, and PathEd, this paper outlines a human-centered AI framework for educational technology.",
+        projects: "SAGE, CogniPath, ScholarPulse, KBS Quiz System, & PathEd",
+        abstract: "As Artificial Intelligence becomes deeply integrated into educational platforms, ensuring student cognitive autonomy is paramount. Algorithms must not create passive dependence on AI systems. Synthesizing insights across SAGE, CogniPath, ScholarPulse, KBS Quiz System, and PathEd, this paper outlines a human-centered AI framework for educational technology.",
         introduction: "Automated tutoring systems risk over-optimizing for speed of completion, leading to algorithmic hand-holding where students rely on AI to solve problems for them. Ethical EdTech must prioritize desirable difficulties and human curiosity over automated completion.",
         methodology: "We audited multi-agent AI workflows across SAGE, CogniPath, and ScholarPulse using human agency metrics. We established three core principles: (1) Socratic Guardrails, (2) Transparent Skill Analytics, and (3) Voluntary Algorithmic Scaffolding.",
         conclusion: "Responsible EdTech AI must empower human learners to become self-directed thinkers. AI is a scaffolding tool to ignite curiosity, not a replacement for human cognition.",
