@@ -775,7 +775,7 @@ function initSmoothScroll() {
 /* Gallery data — define images for each project */
 const GALLERY_DATA = {
     sage: {
-        title: 'SAGE — Mobile Learning Platform',
+        title: 'SAGE — Web Learning Platform',
         images: [
             'path/to/sage-preview-1.jpg',
             'path/to/sage-preview-2.jpg',
@@ -1327,7 +1327,7 @@ const RESEARCH_PAPERS = {
         affiliation: "United Institute of Technology / Independent EdTech Research Group",
         journal: "Personal Paper Report • Cognitive Physiology & EdTech",
         projects: "SAGE (Version 2), CogniPath, & PathEd Ecosystem",
-        abstract: "Human working memory is fundamentally limited, processing only 4 to 7 items simultaneously (Sweller, 1988). Traditional mobile educational applications often overload learners with contiguous dense text, leading to rapid cognitive fatigue and habit dissolution. This research paper evaluates micro-scaffolding and 9-chapter cognitive roadmap architectures engineered across SAGE and CogniPath. By converting linear knowledge into active decision-making challenges, extraneous cognitive load is reduced by 34% while boosting long-term recall rates.",
+        abstract: "Human working memory is fundamentally limited, processing only 4 to 7 items simultaneously (Sweller, 1988). Traditional web educational applications often overload learners with contiguous dense text, leading to rapid cognitive fatigue and habit dissolution. This research paper evaluates micro-scaffolding and 9-chapter cognitive roadmap architectures engineered across SAGE and CogniPath. By converting linear knowledge into active decision-making challenges, extraneous cognitive load is reduced by 34% while boosting long-term recall rates.",
         introduction: "The digital age presents a paradox: information accessibility has peaked, yet deep learning retention has reached historic lows. Micro-learning and structured chapter roadmaps have emerged as promising mitigation strategies. However, most commercial tools merely truncate text without altering instructional design. This paper proposes a structural framework combining Cognitive Load Theory with Generative AI scenario generation.",
         methodology: "We implemented an adaptive decision-tree engine evaluating learner responses across three cognitive axes: (1) Response Latency, (2) Choice Confidence, and (3) Scenario Difficulty Calibration across SAGE, CogniPath, and PathEd. The system utilizes Spaced Repetition algorithms (SuperMemo SM-2 derivative) aligned with Vygotsky's Zone of Proximal Development (ZPD).",
         conclusion: "Empirical evaluations demonstrate that active scenario-based micro-interactions and 9-chapter cognitive roadmaps significantly enhance intrinsic learner motivation and conceptual mastery. Future work will expand LLM-driven real-time scenario adaptation based on biometric focus telemetry.",
@@ -1439,7 +1439,7 @@ const RESEARCH_PAPERS = {
             "Floridi, L., et al. (2018). AI4People—An ethical framework for a good AI society. Mind & Machine, 28(4), 689-707.",
             "Selwyn, N. (2019). Should robots replace teachers? AI and the future of education. Polity Press.",
             "UNESCO (2021). Recommendation on the Ethics of Artificial Intelligence.",
-            "Kushwaha, R. (2026). Human-Centered AI Frameworks in Mobile Education. AI & Society Research."
+            "Kushwaha, R. (2026). Human-Centered AI Frameworks in Web-Based Education. AI & Society Research."
         ]
     }
 };
