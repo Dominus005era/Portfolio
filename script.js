@@ -1206,7 +1206,7 @@ const PROJECT_BREAKDOWNS = {
         tagline: "Industry Competency Discovery & Skill Telemetry System",
         overview: "PathEd bridges the gap between academic education and industry competence by analyzing real-world skill demands and generating dynamic step-by-step career navigation roadmaps.",
         backstory: "Students often struggle to map university curriculum choices to industry demands. PathEd analyzes real-world skill requirements and generates visual, step-by-step career navigation roadmaps.",
-        architecture: "Developed using React, Vite, and Node.js with MongoDB graph-like schema representations of skill trees. Features interactive nodes, dynamic progress tracking, and recruiter telemetry analytics.",
+        architecture: "Developed using React, Vite, and Node.js with Supabase graph-like schema representations of skill trees. Features interactive nodes, dynamic progress tracking, and recruiter telemetry analytics.",
         features: [
             "Dynamic Visual Skill Roadmaps",
             "Recruiter-Student Competency Matching",

@@ -31,7 +31,7 @@ This repository includes a dedicated research blog (`blog.html`) featuring 7 aca
 ## 🛠️ Technical Stack & Toolkit
 
 * **Frontend:** React 19, TypeScript 5.8, Vite 6, Tailwind CSS v4, HTML5, Vanilla CSS3, Framer Motion
-* **Backend & Cloud:** Node.js, Express, Firebase v12 (Auth & Cloud Firestore), MongoDB
+* **Backend & Cloud:** Node.js, Express, Firebase v12 (Auth & Cloud Firestore), Supabase
 * **AI & Machine Learning:** Google GenAI SDK (`@google/genai`), Gemini 3 Flash, Gemini 2.0 Flash, Python, OpenCV
 * **Deployment:** Vercel, GitHub Pages
 
