@@ -57,6 +57,16 @@
 
 <body>
 
+    <!-- Scroll Progress Indicator Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Background Ambient Aurora Light Fields -->
+    <div class="aurora-wrapper" aria-hidden="true">
+        <div class="aurora-dot"></div>
+        <div class="aurora-dot"></div>
+        <div class="aurora-dot"></div>
+    </div>
+
     <!-- ══════════════════════════════════════════════════════
          CUSTOM CURSOR
          Two layered elements that follow the mouse.
@@ -99,18 +109,15 @@
             </a>
 
             <!-- ── DESKTOP NAV LINKS ────────────────────────
-                 Add or remove <li> items to change nav links.
-                 Each href must match the section id below.
+                 Updated navigation links: Home, About, Projects, Mission, Personal Blog, Contact
             ─────────────────────────────────────────────── -->
             <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
                 <ul>
+                    <li><a href="#hero"           class="nav-link">Home</a></li>
                     <li><a href="#about"          class="nav-link">About</a></li>
-                    <li><a href="#skills"         class="nav-link">Skills</a></li>
-                    <li><a href="#experience"     class="nav-link">Experience</a></li>
                     <li><a href="#projects"       class="nav-link">Projects</a></li>
-                    <li><a href="#education"      class="nav-link">Education</a></li>
-                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                    <li><a href="#achievements"   class="nav-link">Achievements</a></li>
+                    <li><a href="#mission"        class="nav-link">Mission</a></li>
+                    <li><a href="blog.html"          class="nav-link">Personal Blog</a></li>
                     <!-- ── CONTACT BUTTON — styled differently ── -->
                     <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
                 </ul>
@@ -148,6 +155,26 @@
         <div class="hero-shape hero-shape--2" aria-hidden="true"></div>
         <div class="hero-shape hero-shape--3" aria-hidden="true"></div>
 
+        <!-- Floating Cybernetic Tech Icons in Background -->
+        <div class="cyber-floaters-container" aria-hidden="true">
+            <div class="cyber-floater floater-1" data-tilt><i class="fas fa-code" title="Coding"></i></div>
+            <div class="cyber-floater floater-2" data-tilt><i class="fas fa-terminal" title="Terminal"></i></div>
+            <div class="cyber-floater floater-3" data-tilt><i class="fab fa-react" title="React Engine"></i></div>
+            <div class="cyber-floater floater-4" data-tilt><i class="fab fa-python" title="Python Science"></i></div>
+            <div class="cyber-floater floater-5" data-tilt><i class="fas fa-brain" title="AI Agents"></i></div>
+            <div class="cyber-floater floater-6" data-tilt><i class="fas fa-mobile-alt" title="Mobile Apps"></i></div>
+        </div>
+
+        <!-- Floating Code Texts in Background -->
+        <div class="cyber-texts-container" aria-hidden="true">
+            <span class="floating-text t-1" data-tilt>&lt;/&gt;</span>
+            <span class="floating-text t-2" data-tilt>{...}</span>
+            <span class="floating-text t-3" data-tilt>const</span>
+            <span class="floating-text t-4" data-tilt>API</span>
+            <span class="floating-text t-5" data-tilt>JSON</span>
+            <span class="floating-text t-6" data-tilt>Git</span>
+        </div>
+
         <div class="container hero-container">
 
             <!-- ── AVAILABILITY BADGE ──────────────────────
@@ -174,8 +201,8 @@
                  Edit both lines freely.
             ─────────────────────────────────────────────── -->
             <p class="hero-tagline" data-reveal>
-                Engineering the next generation of smart learning —
-                <em>Bridging the gap between knowledge and application.</em>
+                <span class="tagline-role">AI Developer | Education Technology Researcher | Human-Centered AI | Learning Sciences | Cognitive Physiology</span>
+                <span class="tagline-quote">"Building technology that understands how people learn—not just how computers think."</span>
             </p>
 
             <!-- ── TYPED TEXT ───────────────────────────────
@@ -246,139 +273,342 @@
     <section id="about" class="section about-section">
         <div class="container">
 
-            <div class="about-grid">
+            <div class="section-header" data-reveal style="text-align: center; margin-bottom: 3.5rem;">
+                <span class="section-eyebrow">01 — About &amp; Research Matrix</span>
+                <h2 class="section-title">Architecting Human-Centered EdTech</h2>
+                <p class="section-subtitle" style="max-width: 750px; margin: 0.5rem auto 0 auto;">Combining Artificial Intelligence, Cognitive Physiology, and Modern Mobile/Web Frameworks to revolutionize how humans learn.</p>
+            </div>
 
-                <!-- Left Column: Label + Avatar -->
-                <div class="about-left">
-                    <span class="section-eyebrow">01 — About</span>
-                    <h2 class="section-title">Who I Am</h2>
+            <!-- Enhanced About Dashboard Grid -->
+            <div class="about-dashboard-grid">
 
-                    <!-- ── AVATAR ───────────────────────────────
-                         Replace the src attribute with your actual profile photo path.
-                         Supported formats: .jpg, .png, .webp
-                         Recommended size: 300x300px or larger
-                    ─────────────────────────────────────────── -->
+                <!-- Left Column: Profile Card + Stats + Philosophy -->
+                <div class="about-profile-card" data-reveal>
                     <div class="avatar-wrap">
                         <div class="avatar-ring-outer"></div>
                         <div class="avatar-ring-inner"></div>
                         <div class="avatar-core avatar-image">
-                            <!-- Replace src with your profile image path -->
                             <img src="Rahul_Kushwaha.jpeg" alt="Rahul Kushwaha - Profile" class="avatar-photo">
                         </div>
-                        <!-- Orbiting dot (decorative) -->
                         <div class="avatar-orbit" aria-hidden="true">
                             <span class="orbit-dot"></span>
                         </div>
                     </div>
+
+                    <h3 class="profile-name">Rahul Kushwaha</h3>
+                    <p class="profile-title">AI Developer &amp; EdTech Researcher</p>
+                    
+                    <div class="profile-status-badge">
+                        <span class="badge-pulse"></span>
+                        Available for Research &amp; Engineering Roles
+                    </div>
+
+                    <!-- Research Quote Box -->
+                    <div class="research-quote-card">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p class="quote-text">Building technology that understands how people learn—not just how computers think.</p>
+                        <span class="quote-author">— Research Philosophy</span>
+                    </div>
+
+                    <!-- Quick Telemetry Counters -->
+                    <div class="about-stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-num">5<span class="stat-plus">+</span></span>
+                            <span class="stat-lbl">Platforms Built</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num">6<span class="stat-plus">+</span></span>
+                            <span class="stat-lbl">Research Papers</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num">100<span class="stat-plus">%</span></span>
+                            <span class="stat-lbl">Open Tech</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Right Column: Bio + Stats -->
-                <div class="about-right">
+                <!-- Right Column: High-Tech Feature Grid -->
+                <div class="about-content-grid" data-reveal>
 
-                    <!-- ── BIO PARAGRAPHS ───────────────────────
-                         Edit the text inside <p> tags freely.
-                         Add more <p> tags for more paragraphs.
-                    ─────────────────────────────────────────── -->
-                    <p class="about-bio">
-                        I am a <strong>software developer</strong> at United Institute of Technology focused on transforming passive education into active, scenario-based experiences. By combining full-stack web expertise with modern mobile frameworks like <strong>Flutter and React Native</strong>, I build tools that integrate AI-driven insights into daily learning habits.
-                    </p>
-                    <p class="about-bio">
-                        My mission is to engineer <strong>scalable, intelligent platforms</strong> that turn micro-moments of curiosity into real-world competence — making technology a bridge, not a barrier.
-                    </p>
+                    <!-- Bio Intro Card -->
+                    <div class="about-box about-box--bio">
+                        <div class="box-header">
+                            <i class="fas fa-user-astronaut box-icon" style="color: var(--color-accent);"></i>
+                            <h4>Biography &amp; Core Mission</h4>
+                        </div>
+                        <p class="about-bio-text">
+                            I am <strong>Rahul Kushwaha</strong>, a technology developer, web engineer, mobile architect, and independent researcher dedicated to exploring the intersection of <strong>Artificial Intelligence, Educational Technology (EdTech), Cognitive Physiology, and Human Psychology</strong>.
+                        </p>
+                        <p class="about-bio-text">
+                            My core mission is to design adaptive learning platforms that replace passive content scrolling with active, scenario-based decision-making. By integrating evidence-based psychological principles with modern generative AI, I build tools that make learning intentional, deeply engaging, and empowering.
+                        </p>
+                    </div>
 
-                    <!-- ── QUICK STATS ──────────────────────────
-                         Three numbered highlights.
-                         Edit the number in <span class="stat-num">
-                         and the label in <span class="stat-lbl">
-                    ─────────────────────────────────────────── -->
-                    <div class="about-stats">
-                        <div class="stat-card">
-                            <span class="stat-num">3<span class="stat-plus">+</span></span>
-                            <span class="stat-lbl">Projects Built</span>
+                    <!-- 4 Core Pillars Grid -->
+                    <div class="about-pillars-grid">
+                        <div class="pillar-card">
+                            <div class="pillar-icon" style="background: rgba(0, 217, 255, 0.12); color: #00d9ff;"><i class="fas fa-brain"></i></div>
+                            <h5>AI in Education (AI4ED)</h5>
+                            <p>Architecting Socratic LLM tutoring guardrails that guide critical thinking without hallucinating or regurgitating answers.</p>
                         </div>
-                        <div class="stat-card">
-                            <span class="stat-num">2</span>
-                            <span class="stat-lbl">Certifications</span>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon" style="background: rgba(0, 255, 170, 0.12); color: #00ffaa;"><i class="fas fa-heartbeat"></i></div>
+                            <h5>Cognitive Physiology</h5>
+                            <p>Applying Working Memory Theory (Sweller) and Spaced Repetition (ZPD) to minimize extraneous cognitive load.</p>
                         </div>
-                        <div class="stat-card">
-                            <span class="stat-num">5<span class="stat-plus">+</span></span>
-                            <span class="stat-lbl">Technologies</span>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon" style="background: rgba(168, 85, 247, 0.12); color: #a855f7;"><i class="fas fa-mobile-alt"></i></div>
+                            <h5>Mobile &amp; Web Architectures</h5>
+                            <p>Engineering cross-platform engines in Flutter, React Native, and React/Vite with sub-16ms render loops.</p>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon" style="background: rgba(236, 72, 153, 0.12); color: #ec4899;"><i class="fas fa-chart-line"></i></div>
+                            <h5>Learning Analytics &amp; Well-Being</h5>
+                            <p>Tracking telemetry to measure deep focus flow states while avoiding addictive dopamine doom-scroll loops.</p>
                         </div>
                     </div>
 
-                    <a href="#contact" class="btn btn--primary btn--sm">Let's Connect →</a>
+                    <!-- Research Focus & Goals Tags Box -->
+                    <div class="about-box about-box--tags">
+                        <div class="box-header">
+                            <i class="fas fa-tags box-icon" style="color: var(--color-accent-2);"></i>
+                            <h4>Active Research Focus &amp; Interests</h4>
+                        </div>
+                        <div class="interest-tags-wrapper">
+                            <span class="interest-tag"><i class="fas fa-check"></i> Adaptive Learning Systems</span>
+                            <span class="interest-tag"><i class="fas fa-check"></i> Intelligent Tutoring Systems</span>
+                            <span class="interest-tag"><i class="fas fa-check"></i> Socratic Prompt Engineering</span>
+                            <span class="interest-tag"><i class="fas fa-check"></i> Educational Data Mining</span>
+                            <span class="interest-tag"><i class="fas fa-check"></i> Scenario-Based Micro-Learning</span>
+                            <span class="interest-tag"><i class="fas fa-check"></i> Digital Well-being Telemetry</span>
+                            <span class="interest-tag"><i class="fas fa-check"></i> Peer-Reviewed Publications</span>
+                            <span class="interest-tag"><i class="fas fa-check"></i> Human-Centered AI Ethics</span>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
+
         </div>
     </section>
     <!-- ── END ABOUT ─────────────────────────────────────── -->
 
 
     <!-- ══════════════════════════════════════════════════════
-         ██  SECTION 3 — SKILLS
+         ██  SECTION 3 — SKILLS (TECHNICAL ARSENAL)
     ══════════════════════════════════════════════════════════ -->
     <section id="skills" class="section skills-section">
         <div class="container">
 
-            <div class="section-header">
-                <span class="section-eyebrow">02 — Skills</span>
-                <h2 class="section-title">What I Work With</h2>
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">02 — Technical Arsenal</span>
+                <h2 class="section-title">Technical Arsenal &amp; Specialty Matrix</h2>
+                <p class="section-subtitle">Combining web engineering, mobile development, and AI research to architect intelligent, human-centered educational platforms.</p>
             </div>
 
-            <!-- ── SKILLS GRID ──────────────────────────────
-                 Three columns — one per skill category.
-                 To add a skill: add <li>Skill Name</li>
-                 To add a column: duplicate a .skill-card block
-                 and update the icon, title, and list items.
-            ─────────────────────────────────────────────── -->
             <div class="skills-grid">
 
-                <!-- Technical Skills Card -->
-                <div class="skill-card" data-reveal>
+                <!-- Category 1: Frontend & Web Engineering -->
+                <div class="skill-card-theme frontend-theme" data-reveal data-tilt>
                     <div class="skill-card__header">
-                        <!-- Icon: change the fa- class to change the icon -->
                         <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
-                        <!-- Category title -->
-                        <h3>Technical</h3>
+                        <h3>Frontend &amp; Web Engineering</h3>
                     </div>
-                    <ul class="skill-list">
-                        <!-- Add/remove skill items here -->
-                        <li><span class="skill-bullet"></span>React &amp; Vite</li>
-                        <li><span class="skill-bullet"></span>Node.js</li>
-                        <li><span class="skill-bullet"></span>React Native</li>
-                        <li><span class="skill-bullet"></span>Flutter</li>
-                        <li><span class="skill-bullet"></span>Python</li>
-                        <li><span class="skill-bullet"></span>Java</li>
-                        <li><span class="skill-bullet"></span>C++</li>
-                    </ul>
+                    <div class="skill-items-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-react" style="color: #61DAFB;"></i>
+                            <span>React.js</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <svg width="24" height="24" viewBox="0 0 128 128" fill="none"><circle cx="64" cy="64" r="64" fill="#000"/><path d="M96 95L58.5 48h-7v40h6V55.5L90.5 95h5.5zM83.5 48h6v28.5h-6z" fill="#fff"/></svg>
+                            <span>Next.js</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 82%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js" style="color: #F7DF1E;"></i>
+                            <span>JavaScript (ES6+)</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 92%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <svg width="24" height="24" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" fill="#3178C6" rx="10"/><text x="18" y="78" fill="#FFF" font-family="Arial, sans-serif" font-weight="bold" font-size="55">TS</text></svg>
+                            <span>TypeScript</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C7.666 17.818 9.027 19 12.001 19c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" fill="#38BDF8"/></svg>
+                            <span>Tailwind CSS</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-html5" style="color: #E34F26;"></i>
+                            <span>HTML5 &amp; CSS3</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 95%;"></div></div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Specialized Skills Card -->
-                <div class="skill-card" data-reveal>
+                <!-- Category 2: Backend & Databases -->
+                <div class="skill-card-theme backend-theme" data-reveal data-tilt>
                     <div class="skill-card__header">
-                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
-                        <h3>Specialized</h3>
+                        <div class="skill-icon"><i class="fas fa-server"></i></div>
+                        <h3>Backend &amp; Databases</h3>
                     </div>
-                    <ul class="skill-list">
-                        <li><span class="skill-bullet"></span>AI Agent Integration</li>
-                        <li><span class="skill-bullet"></span>Scenario-Based Learning Design</li>
-                        <li><span class="skill-bullet"></span>Data Visualization</li>
-                        <li><span class="skill-bullet"></span>REST APIs</li>
-                    </ul>
+                    <div class="skill-items-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js" style="color: #339933;"></i>
+                            <span>Node.js</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-fire" style="color: #FFCA28;"></i>
+                            <span>Firebase</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-leaf" style="color: #47A248;"></i>
+                            <span>MongoDB</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 84%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python" style="color: #3776AB;"></i>
+                            <span>Python</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 92%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code" style="color: #00599C;"></i>
+                            <span>C / C++</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-plug" style="color: #00d9ff;"></i>
+                            <span>REST APIs &amp; Express</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 90%;"></div></div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Soft Skills Card -->
-                <div class="skill-card" data-reveal>
+                <!-- Category 3: Mobile Engineering -->
+                <div class="skill-card-theme mobile-theme" data-reveal data-tilt>
                     <div class="skill-card__header">
-                        <div class="skill-icon"><i class="fas fa-seedling"></i></div>
-                        <h3>Soft Skills</h3>
+                        <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Mobile Engineering</h3>
                     </div>
-                    <ul class="skill-list">
-                        <li><span class="skill-bullet"></span>Project Planning</li>
-                        <li><span class="skill-bullet"></span>Creative Problem Solving</li>
-                        <li><span class="skill-bullet"></span>Strategic Innovation</li>
-                    </ul>
+                    <div class="skill-items-grid">
+                        <div class="skill-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14.3 2.17L9.75 6.72l4.55 4.55 4.55-4.55L14.3 2.17zM2.17 14.3l4.55 4.55 4.55-4.55-4.55-4.55L2.17 14.3zm12.13 0l-4.55 4.55 4.55 4.55 4.55-4.55-4.55-4.55z" fill="#02569B"/></svg>
+                            <span>Flutter Architecture</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react" style="color: #61DAFB;"></i>
+                            <span>React Native</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-layer-group" style="color: #a855f7;"></i>
+                            <span>Cross-Platform UI/UX</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 86%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cubes" style="color: #00ffaa;"></i>
+                            <span>State Management (Zustand/Bloc)</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-hdd" style="color: #FF9900;"></i>
+                            <span>Offline-First Storage</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 82%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4: AI & Data Science -->
+                <div class="skill-card-theme ai-theme" data-reveal data-tilt>
+                    <div class="skill-card__header">
+                        <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                        <h3>AI &amp; Data Science</h3>
+                    </div>
+                    <div class="skill-items-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-brain" style="color: #a855f7;"></i>
+                            <span>Machine Learning</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 86%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-microchip" style="color: #00d9ff;"></i>
+                            <span>Large Language Models (LLMs)</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal" style="color: #00ffaa;"></i>
+                            <span>Prompt Engineering</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 92%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line" style="color: #ec4899;"></i>
+                            <span>Data Analytics &amp; Pandas</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database" style="color: #FFC107;"></i>
+                            <span>Educational Data Mining</span>
+                            <div class="skill-progress-wrap"><div class="skill-progress-bar" style="width: 84%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 5: Specialty in Building Education-Based Systems (FEATURED SPECIALTY CARD) -->
+                <div class="skill-card-theme specialty-theme" data-reveal data-tilt style="grid-column: 1 / -1;">
+                    <div class="skill-card__header">
+                        <div class="skill-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>Specialty in Building Education-Based Systems</h3>
+                    </div>
+                    <div class="specialty-bullets-grid">
+                        <div class="specialty-bullet-item">
+                            <div class="specialty-bullet-icon"><i class="fas fa-lightbulb"></i></div>
+                            <div>
+                                <h4>Scenario-Based Micro-Learning Engines</h4>
+                                <p>Designing interactive decision-making branches grounded in Cognitive Load Theory to convert passive scrolling into active problem-solving skills.</p>
+                            </div>
+                        </div>
+
+                        <div class="specialty-bullet-item">
+                            <div class="specialty-bullet-icon"><i class="fas fa-comments"></i></div>
+                            <div>
+                                <h4>Intelligent Tutoring Architecture</h4>
+                                <p>Integrating Large Language Models with Socratic questioning techniques, preventing educational hallucination while providing personalized feedback.</p>
+                            </div>
+                        </div>
+
+                        <div class="specialty-bullet-item">
+                            <div class="specialty-bullet-icon"><i class="fas fa-chart-pie"></i></div>
+                            <div>
+                                <h4>Adaptive Mastery &amp; Spaced Repetition</h4>
+                                <p>Engineering dynamic algorithms that calculate a student's Zone of Proximal Development (ZPD) to deliver optimal content timing.</p>
+                            </div>
+                        </div>
+
+                        <div class="specialty-bullet-item">
+                            <div class="specialty-bullet-icon"><i class="fas fa-user-clock"></i></div>
+                            <div>
+                                <h4>Engagement &amp; Motivation Analytics</h4>
+                                <p>Tracking telemetry to measure deep focus states, study momentum, and digital well-being, replacing vanity metrics with true comprehension signals.</p>
+                            </div>
+                        </div>
+
+                        <div class="specialty-bullet-item">
+                            <div class="specialty-bullet-icon"><i class="fas fa-heart"></i></div>
+                            <div>
+                                <h4>Human-Centered EdTech UX Design</h4>
+                                <p>Architecting low-friction, accessible user interfaces specifically tailored to cognitive physiology principles and learner motivation.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -486,140 +716,356 @@
             ─────────────────────────────────────────────── -->
             <div class="projects-grid">
 
-                <!-- Project 1 — SAGE (Featured / Full-Width) -->
+                <!-- Project 1 — SAGE (Version 2) (Featured / Full-Width) -->
                 <div class="project-card project-card--featured" data-reveal>
-                    <!-- Left Column: Project number + Logo -->
                     <div class="proj-sidebar">
                         <div class="proj-num">01</div>
                         <div class="proj-logo proj-logo--sidebar">
-                            <img src="sage-logo.png" alt="SAGE Logo" class="logo-img">
+                            <i class="fas fa-brain" style="font-size: 2.5rem; color: var(--color-accent);"></i>
                         </div>
                     </div>
                     
-                    <!-- Right Column: Content -->
                     <div class="proj-body">
-                        <!-- Icon — change fa- class to change icon -->
-                        <div class="proj-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <!-- Project Title -->
-                        <h3 class="proj-title">SAGE</h3>
-                        <!-- Short Subtitle -->
-                        <p class="proj-subtitle">Scenario-based Applied General Education</p>
-                        <!-- Description -->
+                        <div class="proj-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h3 class="proj-title">SAGE (Version 2)</h3>
+                        <p class="proj-subtitle">AI-Powered Micro-Learning Platform (React 19 &amp; Gemini AI)</p>
                         <p class="proj-desc">
-                            A mobile platform delivering AI-generated knowledge bites and scenario-based learning to replace mindless scrolling with intentional, curiosity-driven growth. Users earn progress through applied decision scenarios rather than passive content.
+                            A next-generation AI micro-learning platform built with Vite, React, and TypeScript. Uses Google Gemini API (gemini-3-flash-preview) to generate dynamic 20–30s micro-learning challenges, real-time EXP gamification, Firebase auth/cloud storage, and Framer Motion micro-animations.
                         </p>
-                        <!-- Tech tags used -->
                         <div class="proj-tags">
-                            <span>React Native</span>
-                            <span>Flutter</span>
-                            <span>Generative AI</span>
+                            <span>React 19</span>
+                            <span>TypeScript 5.8</span>
+                            <span>Gemini 3 Flash</span>
+                            <span>Firebase v12</span>
+                            <span>Tailwind v4</span>
+                            <span>Vite 6</span>
                         </div>
-                        <!-- Links — update href for live demo or GitHub -->
                         <div class="proj-links">
-                            <!-- GitHub Link Button -->
-                            <a href="https://github.com/Dominus005era" target="_blank" rel="noopener" class="proj-link proj-link--github">
+                            <button class="proj-link proj-link--breakdown" onclick="openProjectBreakdown('sage')">
+                                <i class="fas fa-layer-group"></i> Mini Description
+                            </button>
+                            <a href="https://github.com/Dominus005era/SAGE" target="_blank" rel="noopener" class="proj-link proj-link--primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Dominus005era/SAGE" target="_blank" rel="noopener" class="proj-link proj-link--github">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
-                            <!-- Preview Button (opens image gallery) -->
-                            <button class="proj-link proj-link--preview" onclick="openGallery('sage')">
-                                <i class="fas fa-image"></i> Preview
-                            </button>
                         </div>
                     </div>
-                    <!-- Decorative shine overlay (CSS animated) -->
                     <div class="proj-shine" aria-hidden="true"></div>
                 </div>
 
-                <!-- Project 2 — PathEd -->
+                <!-- Project 2 — PathEd Ecosystem -->
                 <div class="project-card" data-reveal>
                     <div class="proj-sidebar">
                         <div class="proj-num">02</div>
                         <div class="proj-logo proj-logo--sidebar">
-                            <img src="path/to/pathed-logo.png" alt="PathEd Logo" class="logo-img">
+                            <i class="fas fa-route" style="font-size: 2.2rem; color: #3b82f6;"></i>
                         </div>
                     </div>
                     <div class="proj-body">
                         <div class="proj-icon"><i class="fas fa-map-signs"></i></div>
-                        <h3 class="proj-title">PathEd</h3>
-                        <p class="proj-subtitle">Educational Ecosystem Platform</p>
+                        <h3 class="proj-title">PathEd Ecosystem</h3>
+                        <p class="proj-subtitle">Career Roadmap Matching &amp; Competency Discovery Engine</p>
                         <p class="proj-desc">
-                            A comprehensive educational ecosystem featuring recruiter-student matching and interactive academic roadmaps for targeted career growth and skill-based discovery.
+                            An educational ecosystem platform bridging academic study and industry competencies. Analyzes real-world skill demands to generate dynamic step-by-step career roadmaps, skill gap telemetry, and recruiter-student matching.
                         </p>
                         <div class="proj-tags">
                             <span>React</span>
                             <span>Node.js</span>
                             <span>Vite</span>
+                            <span>MongoDB</span>
+                            <span>Skill Telemetry</span>
                         </div>
                         <div class="proj-links">
-                            <a href="https://github.com/Dominus005era" target="_blank" rel="noopener" class="proj-link proj-link--github">
+                            <button class="proj-link proj-link--breakdown" onclick="openProjectBreakdown('pathed')">
+                                <i class="fas fa-layer-group"></i> Mini Description
+                            </button>
+                            <a href="https://github.com/Dominus005era/PathEd-Ecosystem" target="_blank" rel="noopener" class="proj-link proj-link--primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Dominus005era/PathEd-Ecosystem" target="_blank" rel="noopener" class="proj-link proj-link--github">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
-                            <button class="proj-link proj-link--preview" onclick="openGallery('pathed')">
-                                <i class="fas fa-image"></i> Preview
-                            </button>
                         </div>
                     </div>
                     <div class="proj-shine" aria-hidden="true"></div>
                 </div>
 
-                <!-- Project 3 — Interactive Roadmap System -->
+                <!-- Project 3 — ScholarPulse Elite -->
                 <div class="project-card" data-reveal>
                     <div class="proj-sidebar">
                         <div class="proj-num">03</div>
                         <div class="proj-logo proj-logo--sidebar">
-                            <img src="path/to/roadmap-logo.png" alt="Roadmap Logo" class="logo-img">
+                            <i class="fas fa-graduation-cap" style="font-size: 2.2rem; color: #a855f7;"></i>
                         </div>
                     </div>
                     <div class="proj-body">
-                        <div class="proj-icon"><i class="fas fa-project-diagram"></i></div>
-                        <h3 class="proj-title">Interactive Roadmap System</h3>
-                        <p class="proj-subtitle">Gamified Progress UI Component</p>
+                        <div class="proj-icon"><i class="fas fa-user-graduate"></i></div>
+                        <h3 class="proj-title">ScholarPulse Elite</h3>
+                        <p class="proj-subtitle">AI Academic Management &amp; ERP Intelligence Hub</p>
                         <p class="proj-desc">
-                            A dynamic UI component that gamifies student progress through real-time state changes and visual skill-node tracking — making learning milestones visible and rewarding.
+                            A high-performance academic management dashboard leveraging Gemini AI to analyze ERP attendance screenshots, extract calendar exam events, and deliver actionable attendance telemetry.
                         </p>
                         <div class="proj-tags">
-                            <span>JavaScript</span>
+                            <span>TypeScript</span>
+                            <span>Gemini AI API</span>
+                            <span>React / Next.js</span>
                             <span>Tailwind CSS</span>
+                            <span>Vercel</span>
                         </div>
                         <div class="proj-links">
-                            <a href="https://github.com/Dominus005era" target="_blank" rel="noopener" class="proj-link proj-link--github">
+                            <button class="proj-link proj-link--breakdown" onclick="openProjectBreakdown('scholarplus')">
+                                <i class="fas fa-layer-group"></i> Mini Description
+                            </button>
+                            <a href="https://scholarpulse-elite.vercel.app" target="_blank" rel="noopener" class="proj-link proj-link--primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Dominus005era/scholarpulse-elite" target="_blank" rel="noopener" class="proj-link proj-link--github">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
-                            <button class="proj-link proj-link--preview" onclick="openGallery('roadmap')">
-                                <i class="fas fa-image"></i> Preview
-                            </button>
                         </div>
                     </div>
                     <div class="proj-shine" aria-hidden="true"></div>
                 </div>
 
-                <!-- ── TEMPLATE: Copy this block to add more ──
+                <!-- Project 4 — KBC Educational Quiz System -->
                 <div class="project-card" data-reveal>
-                    <div class="proj-num">04</div>
+                    <div class="proj-sidebar">
+                        <div class="proj-num">04</div>
+                        <div class="proj-logo proj-logo--sidebar">
+                            <i class="fas fa-trophy" style="font-size: 2.2rem; color: #eab308;"></i>
+                        </div>
+                    </div>
                     <div class="proj-body">
-                        <div class="proj-icon"><i class="fas fa-YOUR-ICON"></i></div>
-                        <h3 class="proj-title">Project Name</h3>
-                        <p class="proj-subtitle">Short Subtitle</p>
+                        <div class="proj-icon"><i class="fas fa-gamepad"></i></div>
+                        <h3 class="proj-title">KBC Educational Quiz System</h3>
+                        <p class="proj-subtitle">AI-Powered Gamified Learning Platform (Class 1–12)</p>
                         <p class="proj-desc">
-                            Your project description goes here.
+                            An authentic Kaun Banega Crorepati quiz engine powered by Gemini 3.5 Flash AI. Generates grade-aligned questions in real time with 4 lifelines, a 10-Crore Super Bonus round, and AI teacher report cards.
                         </p>
                         <div class="proj-tags">
-                            <span>Tech 1</span>
-                            <span>Tech 2</span>
+                            <span>React 19</span>
+                            <span>TypeScript 5.8</span>
+                            <span>Gemini 3.5 Flash</span>
+                            <span>Vite 6</span>
+                            <span>Tailwind v4</span>
+                            <span>Express</span>
                         </div>
                         <div class="proj-links">
-                            <a href="#" target="_blank" class="proj-link proj-link--primary">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" target="_blank" class="proj-link proj-link--ghost">GitHub <i class="fab fa-github"></i></a>
+                            <button class="proj-link proj-link--breakdown" onclick="openProjectBreakdown('elitekbc')">
+                                <i class="fas fa-layer-group"></i> Mini Description
+                            </button>
+                            <a href="https://kbs-educational-quiz-system.vercel.app" target="_blank" rel="noopener" class="proj-link proj-link--primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Dominus005era/kbs-educational-quiz-system" target="_blank" rel="noopener" class="proj-link proj-link--github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="proj-shine" aria-hidden="true"></div>
                 </div>
-                ─────────────────────────────────────────── -->
+
+                <!-- Project 5 — CogniPath -->
+                <div class="project-card" data-reveal>
+                    <div class="proj-sidebar">
+                        <div class="proj-num">05</div>
+                        <div class="proj-logo proj-logo--sidebar">
+                            <i class="fas fa-sitemap" style="font-size: 2.2rem; color: #10b981;"></i>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-icon"><i class="fas fa-network-wired"></i></div>
+                        <h3 class="proj-title">CogniPath</h3>
+                        <p class="proj-subtitle">AI-Powered Cognitive Learning Journeys (9-Chapter Roadmaps)</p>
+                        <p class="proj-desc">
+                            A full-stack AI learning platform converting any topic, concept, book, or webpage URL into a personalized 9-chapter cognitive roadmap powered by Google Gemini 2.0 Flash. Features an in-chapter AI tutor, final mastery quiz, digital certificates, and EXP/streak gamification.
+                        </p>
+                        <div class="proj-tags">
+                            <span>React 19</span>
+                            <span>TypeScript 5.8</span>
+                            <span>Gemini 2.0 Flash</span>
+                            <span>Vite 6</span>
+                            <span>Express</span>
+                            <span>Tailwind v4</span>
+                        </div>
+                        <div class="proj-links">
+                            <button class="proj-link proj-link--breakdown" onclick="openProjectBreakdown('cognipath')">
+                                <i class="fas fa-layer-group"></i> Mini Description
+                            </button>
+                            <a href="https://cogni-path-pi.vercel.app" target="_blank" rel="noopener" class="proj-link proj-link--primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Dominus005era/CogniPath" target="_blank" rel="noopener" class="proj-link proj-link--github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="proj-shine" aria-hidden="true"></div>
+                </div>
+
+            </div><!-- ── END PROJECTS GRID ── -->
+
+            <!-- ── GITHUB REPOSITORIES SHOWCASE SUB-SECTION ────────────────── -->
+            <div class="github-repos-section" data-reveal id="github-repos">
+                <div class="github-repos-header">
+                    <h3 class="github-repos-title">
+                        <i class="fab fa-github"></i> Public GitHub Repositories
+                    </h3>
+                    <p class="github-repos-sub">Explore source code, stars, and real-time updates for my key open-source repositories.</p>
+                </div>
+
+                <!-- Search and Language Filters -->
+                <div class="github-controls-wrapper">
+                    <div class="github-search-box">
+                        <input type="text" id="github-search" class="github-search-input" placeholder="Search repositories..." oninput="handleGithubSearch(this.value)" />
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="github-filter-tabs" id="github-language-tabs">
+                        <button class="github-filter-tab active" onclick="filterGithubLanguage('All')">All</button>
+                        <button class="github-filter-tab" onclick="filterGithubLanguage('Python')">Python</button>
+                        <button class="github-filter-tab" onclick="filterGithubLanguage('JavaScript')">JavaScript</button>
+                        <button class="github-filter-tab" onclick="filterGithubLanguage('TypeScript')">TypeScript</button>
+                        <button class="github-filter-tab" onclick="filterGithubLanguage('HTMLCSS')">HTML/CSS</button>
+                        <button class="github-filter-tab" onclick="filterGithubLanguage('Other')">Other</button>
+                    </div>
+                </div>
+
+                <!-- Repositories Grid Container -->
+                <div class="github-repos-grid" id="github-repos-container">
+                    <!-- Populated dynamically via script.js -->
+                </div>
+
+                <!-- Pagination Toggle Button -->
+                <div class="github-pagination-wrapper" id="github-pagination-container" style="display: none;">
+                    <button class="btn btn--ghost btn--sm" id="github-toggle-btn" onclick="toggleGithubReposVisibility()">
+                        <span id="github-toggle-btn-text">Show More Repositories</span>
+                        <i class="fas fa-chevron-down" id="github-toggle-btn-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ── END PROJECTS ───────────────────────────────────── -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         ██  SECTION — MISSION
+    ══════════════════════════════════════════════════════════ -->
+    <section id="mission" class="section mission-section">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">05 — Mission</span>
+                <h2 class="section-title">Mission &amp; Engineering Vision</h2>
+                <p class="section-subtitle">Empowering learners and developers by transforming micro-moments of curiosity into real-world competence.</p>
+            </div>
+
+            <div class="mission-grid">
+                <div class="mission-card" data-reveal data-tilt>
+                    <div class="mission-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Transforming Education via Scenario AI</h3>
+                    <p>Replacing passive content consumption with active, scenario-based learning micro-moments that build decision-making confidence and applied engineering skills.</p>
+                </div>
+
+                <div class="mission-card" data-reveal data-tilt>
+                    <div class="mission-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Architecting Scalable Intelligent Platforms</h3>
+                    <p>Combining modern full-stack web technologies, Flutter and React Native mobile engines, and robust AI agent integrations to build high-performance user experiences.</p>
+                </div>
+
+                <div class="mission-card" data-reveal data-tilt>
+                    <div class="mission-icon"><i class="fas fa-code-branch"></i></div>
+                    <h3>Open Tech &amp; Community Empowerment</h3>
+                    <p>Building open-source tools, sharing architectural insights, and collaborating with fellow developers to make technology an empowering bridge for everyone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ── END MISSION ────────────────────────────────────── -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         ██  SECTION — PERSONAL BLOG & RESEARCH PAPERS
+    ══════════════════════════════════════════════════════════ -->
+    <section id="blog" class="section blog-section">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">06 — Academic Publications &amp; Blog</span>
+                <h2 class="section-title">Research Papers &amp; Technical Reports</h2>
+                <p class="section-subtitle">Academic research papers, literature analyses, and architectural reports authored by Rahul Kushwaha.</p>
+            </div>
+
+            <div class="blog-grid">
+
+                <!-- Paper 1 -->
+                <article class="blog-card" data-reveal data-tilt>
+                    <div class="blog-badge"><i class="fas fa-file-alt"></i> Cognitive Physiology &amp; EdTech</div>
+                    <h3 class="blog-title">Cognitive Load Minimization &amp; Micro-Scaffolding in AI Learning Systems</h3>
+                    <p class="blog-author-tag"><i class="fas fa-user-edit"></i> Authored by <strong>Rahul Kushwaha</strong> (AI Developer &amp; EdTech Researcher)</p>
+                    <p class="blog-snippet">An investigation into working memory limits (Sweller, 1988) and how I engineered micro-decision branching and 9-chapter roadmaps to reduce extraneous cognitive load.</p>
+                    <div class="blog-citations">
+                        <span><i class="fas fa-bookmark"></i> Key Literature: Sweller (1988), Bloom (1984), Vygotsky (1978)</span>
+                    </div>
+                    <div style="font-size: 0.82rem; color: var(--color-accent-2); margin-bottom: 1rem;">
+                        <i class="fas fa-cubes"></i> <strong>Implemented In Platforms:</strong> SAGE (Version 2), CogniPath, &amp; PathEd
+                    </div>
+                    <div class="blog-footer">
+                        <button onclick="openResearchPaper(1)" class="btn btn--primary btn--sm"><i class="fas fa-book-open"></i> Read Full Paper</button>
+                        <div class="blog-meta-right">
+                            <span class="blog-watch-count" data-paper-id="1"><i class="fas fa-eye"></i> <span class="watch-num">--</span> views</span>
+                            <span class="blog-read-time"><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Paper 2 -->
+                <article class="blog-card" data-reveal data-tilt>
+                    <div class="blog-badge"><i class="fas fa-robot"></i> AI4ED &amp; Human-AI Interaction</div>
+                    <h3 class="blog-title">Human-AI Co-Adaptation &amp; Contextual Socratic Tutoring Engines</h3>
+                    <p class="blog-author-tag"><i class="fas fa-user-edit"></i> Authored by <strong>Rahul Kushwaha</strong> (AI Developer &amp; EdTech Researcher)</p>
+                    <p class="blog-snippet">Formulating Socratic prompt guardrails to prevent LLM answer regurgitation. Explains how I designed in-chapter AI tutors and real-time question engines.</p>
+                    <div class="blog-citations">
+                        <span><i class="fas fa-bookmark"></i> Key Literature: Vaswani et al. (2017), Anderson (1995), Vygotsky (1978)</span>
+                    </div>
+                    <div style="font-size: 0.82rem; color: var(--color-accent-2); margin-bottom: 1rem;">
+                        <i class="fas fa-cubes"></i> <strong>Implemented In Platforms:</strong> CogniPath, KBC Quiz System, &amp; SAGE
+                    </div>
+                    <div class="blog-footer">
+                        <button onclick="openResearchPaper(2)" class="btn btn--primary btn--sm"><i class="fas fa-book-open"></i> Read Full Paper</button>
+                        <div class="blog-meta-right">
+                            <span class="blog-watch-count" data-paper-id="2"><i class="fas fa-eye"></i> <span class="watch-num">--</span> views</span>
+                            <span class="blog-read-time"><i class="far fa-clock"></i> 10 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Paper 3 -->
+                <article class="blog-card" data-reveal data-tilt>
+                    <div class="blog-badge"><i class="fas fa-gamepad"></i> Gamification &amp; Retrieval Practice</div>
+                    <h3 class="blog-title">High-Stakes Retrieval Practice, Timed Arousal, &amp; Lifeline Telemetry</h3>
+                    <p class="blog-author-tag"><i class="fas fa-user-edit"></i> Authored by <strong>Rahul Kushwaha</strong> (AI Developer &amp; EdTech Researcher)</p>
+                    <p class="blog-snippet">Investigating the Testing Effect (Roediger &amp; Karpicke, 2006). Explains how timed arousal pressure, lifelines, and EXP streak mechanics were operationalized.</p>
+                    <div class="blog-citations">
+                        <span><i class="fas fa-bookmark"></i> Key Literature: Roediger &amp; Karpicke (2006), Bjork &amp; Bjork (2011)</span>
+                    </div>
+                    <div style="font-size: 0.82rem; color: var(--color-accent-2); margin-bottom: 1rem;">
+                        <i class="fas fa-cubes"></i> <strong>Implemented In Platforms:</strong> KBC Quiz System, CogniPath, &amp; SAGE
+                    </div>
+                    <div class="blog-footer">
+                        <button onclick="openResearchPaper(3)" class="btn btn--primary btn--sm"><i class="fas fa-book-open"></i> Read Full Paper</button>
+                        <div class="blog-meta-right">
+                            <span class="blog-watch-count" data-paper-id="3"><i class="fas fa-eye"></i> <span class="watch-num">--</span> views</span>
+                            <span class="blog-read-time"><i class="far fa-clock"></i> 9 min read</span>
+                        </div>
+                    </div>
+                </article>
 
             </div>
         </div>
     </section>
-    <!-- ── END PROJECTS ───────────────────────────────────── -->
+    <!-- ── END PERSONAL BLOG ───────────────────────────────── -->
 
 
     <!-- ══════════════════════════════════════════════════════
@@ -1052,7 +1498,35 @@
         </div>
     </div>
 
-    <!-- ──────────────────────────────────────────────────── -->
+    <!-- ══════════════════════════════════════════════════════
+         PROJECT DETAILED BREAKDOWN MODAL (Mini Description)
+    ══════════════════════════════════════════════════════════ -->
+    <div class="custom-modal" id="projectBreakdownModal">
+        <div class="modal-backdrop" onclick="closeProjectBreakdown()"></div>
+        <div class="modal-dialog">
+            <button class="modal-close-btn" onclick="closeProjectBreakdown()" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="projectBreakdownContent">
+                <!-- Populated dynamically via script.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════
+         ACADEMIC RESEARCH PAPER MODAL (Full Report Viewer)
+    ══════════════════════════════════════════════════════════ -->
+    <div class="custom-modal" id="researchPaperModal">
+        <div class="modal-backdrop" onclick="closeResearchPaper()"></div>
+        <div class="modal-dialog academic-modal-dialog">
+            <button class="modal-close-btn" onclick="closeResearchPaper()" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="researchPaperContent">
+                <!-- Populated dynamically via script.js -->
+            </div>
+        </div>
+    </div>
 
 
     <!-- ──────────────────────────────────────────────────── -->

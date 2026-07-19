@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Research Blog — Rahul Kushwaha | AI &amp; EdTech Researcher</title>
+    <meta name="description" content="Academic research papers, literature analyses, and technical insights authored by Rahul Kushwaha exploring AI, Cognitive Psychology, EdTech, and Learning Sciences.">
+    <meta name="author" content="Rahul Kushwaha">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Aurora Background Glow -->
+    <div class="aurora-wrapper" aria-hidden="true">
+        <div class="aurora-blob aurora-blob--1"></div>
+        <div class="aurora-blob aurora-blob--2"></div>
+        <div class="aurora-blob aurora-blob--3"></div>
+    </div>
+
+    <!-- Scroll Progress Indicator Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-outer" id="cursorOuter"></div>
+    <div class="cursor-inner" id="cursorInner"></div>
+
+    <!-- Background Noise Grain -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- Navigation Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-container">
+            <a href="index.html#hero" class="nav-logo" aria-label="Home">
+                RK<span class="logo-accent">.</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="index.html#hero" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="index.html#mission" class="nav-link">Mission</a></li>
+                    <li><a href="blog.html" class="nav-link active">Personal Blog</a></li>
+                    <li><a href="index.html#contact" class="nav-link nav-cta">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="padding-top: 100px;">
+        <section class="section">
+            <div class="container">
+
+                <div class="section-header" data-reveal style="text-align: center; margin-bottom: 3.5rem;">
+                    <span class="section-eyebrow">Academic Research Hub</span>
+                    <h1 class="section-title" style="font-size: 2.5rem;">Rahul Kushwaha's Research Papers &amp; Insights</h1>
+                    <p class="section-subtitle" style="max-width: 780px; margin: 1rem auto 0 auto; font-size: 1.05rem; line-height: 1.7;">
+                        Deep-dive academic mini-reports linking theoretical Cognitive Physiology and AI Models with real-world software platforms built in my lab (SAGE, PathEd, Scholar Plus, and Elite KBC).
+                    </p>
+                </div>
+
+                <!-- Controls & Search -->
+                <div class="github-controls-wrapper" data-reveal style="margin-bottom: 3rem;">
+                    <div class="github-search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="blogSearchInput" class="github-search-input" placeholder="Search papers by keyword, topic, or project (e.g., SAGE, Socratic, Cognitive Load)..." onkeyup="filterBlogPosts()">
+                    </div>
+
+                    <div class="github-filter-tabs" id="blogFilterTabs">
+                        <button class="github-filter-tab active" onclick="setBlogCategory('all', this)">All Research Papers</button>
+                        <button class="github-filter-tab" onclick="setBlogCategory('ai4ed', this)">AI4ED &amp; LLMs</button>
+                        <button class="github-filter-tab" onclick="setBlogCategory('psychology', this)">Cognitive Physiology</button>
+                        <button class="github-filter-tab" onclick="setBlogCategory('analytics', this)">Learning Analytics</button>
+                        <button class="github-filter-tab" onclick="setBlogCategory('architecture', this)">Platform Architecture</button>
+                    </div>
+                </div>
+
+                <!-- Blog Grid -->
+                <div class="blog-grid" id="fullBlogGrid">
+
+                    <!-- Paper 1 -->
+                    <article class="blog-card" data-reveal data-category="psychology" data-keywords="sage cognipath pathed cognitive load sweller micro-learning roadmaps">
+                        <div class="blog-badge"><i class="fas fa-file-alt"></i> Cognitive Physiology &amp; EdTech</div>
+                        <h3 class="blog-title">Cognitive Load Minimization &amp; Micro-Scaffolding in AI Learning Systems</h3>
+                        <p class="blog-author-tag"><i class="fas fa-user-edit"></i> Authored by <strong>Rahul Kushwaha</strong> (AI Developer &amp; EdTech Researcher)</p>
+                        <p class="blog-snippet">An investigation into working memory limits (Sweller, 1988) and how I engineered micro-decision branching and 9-chapter roadmaps to reduce extraneous cognitive load across digital learning environments.</p>
+                        <div class="blog-citations">
+                            <span><i class="fas fa-bookmark"></i> Key Literature: Sweller (1988), Bloom (1984), Vygotsky (1978)</span>
+                        </div>
+                        <div style="font-size: 0.82rem; color: var(--color-accent-2); margin-bottom: 1rem;">
+                            <i class="fas fa-cubes"></i> <strong>Implemented In Platforms:</strong> SAGE (Version 2), CogniPath, &amp; PathEd
+                        </div>
+                        <div class="blog-footer">
+                            <button onclick="openResearchPaper(1)" class="btn btn--primary btn--sm"><i class="fas fa-book-open"></i> Read Full Paper</button>
+                            <div class="blog-meta-right">
+                                <span class="blog-watch-count" data-paper-id="1"><i class="fas fa-eye"></i> <span class="watch-num">--</span> views</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 8 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Paper 2 -->
+                    <article class="blog-card" data-reveal data-category="ai4ed" data-keywords="cognipath kbc sage socratic llm prompt engineering tutoring ai">
+                        <div class="blog-badge"><i class="fas fa-robot"></i> AI4ED &amp; Human-AI Interaction</div>
+                        <h3 class="blog-title">Human-AI Co-Adaptation &amp; Contextual Socratic Tutoring Engines</h3>
+                        <p class="blog-author-tag"><i class="fas fa-user-edit"></i> Authored by <strong>Rahul Kushwaha</strong> (AI Developer &amp; EdTech Researcher)</p>
+                        <p class="blog-snippet">Formulating Socratic prompt guardrails to prevent LLM answer regurgitation. Explains how I designed the in-chapter AI tutor and real-time question engines inside my platforms.</p>
+                        <div class="blog-citations">
+                            <span><i class="fas fa-bookmark"></i> Key Literature: Vaswani et al. (2017), Anderson (1995), Vygotsky (1978)</span>
+                        </div>
+                        <div style="font-size: 0.82rem; color: var(--color-accent-2); margin-bottom: 1rem;">
+                            <i class="fas fa-cubes"></i> <strong>Implemented In Platforms:</strong> CogniPath, KBC Quiz System, &amp; SAGE
+                        </div>
+                        <div class="blog-footer">
+                            <button onclick="openResearchPaper(2)" class="btn btn--primary btn--sm"><i class="fas fa-book-open"></i> Read Full Paper</button>
+                            <div class="blog-meta-right">
+                                <span class="blog-watch-count" data-paper-id="2"><i class="fas fa-eye"></i> <span class="watch-num">--</span> views</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 10 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Paper 3 -->
+                    <article class="blog-card" data-reveal data-category="psychology" data-keywords="kbc cognipath sage retrieval testing effect gamification quiz">
+                        <div class="blog-badge"><i class="fas fa-gamepad"></i> Gamification &amp; Retrieval Practice</div>
+                        <h3 class="blog-title">High-Stakes Retrieval Practice, Timed Arousal, &amp; Lifeline Telemetry</h3>
+                        <p class="blog-author-tag"><i class="fas fa-user-edit"></i> Authored by <strong>Rahul Kushwaha</strong> (AI Developer &amp; EdTech Researcher)</p>
+                        <p class="blog-snippet">Investigating the Testing Effect (Roediger &amp; Karpicke, 2006). Explains how timed arousal pressure, lifelines, and EXP streak mechanics were operationalized across gamified platforms.</p>
+                        <div class="blog-citations">
+                            <span><i class="fas fa-bookmark"></i> Key Literature: Roediger &amp; Karpicke (2006), Bjork &amp; Bjork (2011)</span>
+                        </div>
+                        <div style="font-size: 0.82rem; color: var(--color-accent-2); margin-bottom: 1rem;">
+                            <i class="fas fa-cubes"></i> <strong>Implemented In Platforms:</strong> KBC Educational Quiz System, CogniPath, &amp; SAGE
+                        </div>
+                        <div class="blog-footer">
+                            <button onclick="openResearchPaper(3)" class="btn btn--primary btn--sm"><i class="fas fa-book-open"></i> Read Full Paper</button>
+                            <div class="blog-meta-right">
+                                <span class="blog-watch-count" data-paper-id="3"><i class="fas fa-eye"></i> <span class="watch-num">--</span> views</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 9 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Paper 4 -->
+                    <article class="blog-card" data-reveal data-category="ai4ed" data-keywords="scholarpulse face_seeker vision gemini attendance biometric">
+                        <div class="blog-badge"><i class="fas fa-eye"></i> AI &amp; Multimodal Vision Telemetry</div>
+                        <h3 class="blog-title">Multimodal Vision Processing for Automated Academic &amp; Attendance Telemetry</h3>
+                        <p class="blog-author-tag"><i class="fas fa-user-edit"></i> Authored by <strong>Rahul Kushwaha</strong> (AI Developer &amp; EdTech Researcher)</p>
+                        <p class="blog-snippet">Integrating multimodal vision models and computer vision pipelines to parse ERP attendance screenshots, extract calendar dates, and verify identity streams.</p>
+                        <div class="blog-citations">
+                            <span><i class="fas fa-bookmark"></i> Key Literature: Radford et al. (2021), Viola &amp; Jones (2001)</span>
+                        </div>
+                        <div style="font-size: 0.82rem; color: var(--color-accent-2); margin-bottom: 1rem;">
+                            <i class="fas fa-cubes"></i> <strong>Implemented In Platforms:</strong> ScholarPulse Elite &amp; Face Seeker
+                        </div>
+                        <div class="blog-footer">
+                            <button onclick="openResearchPaper(4)" class="btn btn--primary btn--sm"><i class="fas fa-book-open"></i> Read Full Paper</button>
+                            <div class="blog-meta-right">
+                                <span class="blog-watch-count" data-paper-id="4"><i class="fas fa-eye"></i> <span class="watch-num">--</span> views</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 9 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Paper 5 -->
+                    <article class="blog-card" data-reveal data-category="architecture" data-keywords="cognipath scholarpulse sage fallback multi model architecture">
+                        <div class="blog-badge"><i class="fas fa-layer-group"></i> Platform Architecture &amp; Systems</div>
+                        <h3 class="blog-title">Dynamic 9-Chapter Curriculum Generation &amp; Multi-Model AI Fallback Architectures</h3>
+                        <p class="blog-author-tag"><i class="fas fa-user-edit"></i> Authored by <strong>Rahul Kushwaha</strong> (AI Developer &amp; EdTech Researcher)</p>
+                        <p class="blog-snippet">Engineering fault-tolerant AI pipelines with multi-model fallback chains to deliver instant 9-chapter roadmaps and uninterrupted educational responses.</p>
+                        <div class="blog-citations">
+                            <span><i class="fas fa-bookmark"></i> Key Literature: Fowler (2014), Dean &amp; Barroso (2013)</span>
+                        </div>
+                        <div style="font-size: 0.82rem; color: var(--color-accent-2); margin-bottom: 1rem;">
+                            <i class="fas fa-cubes"></i> <strong>Implemented In Platforms:</strong> CogniPath, ScholarPulse Elite, &amp; SAGE
+                        </div>
+                        <div class="blog-footer">
+                            <button onclick="openResearchPaper(5)" class="btn btn--primary btn--sm"><i class="fas fa-book-open"></i> Read Full Paper</button>
+                            <div class="blog-meta-right">
+                                <span class="blog-watch-count" data-paper-id="5"><i class="fas fa-eye"></i> <span class="watch-num">--</span> views</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 10 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Paper 6 -->
+                    <article class="blog-card" data-reveal data-category="analytics" data-keywords="pathed cognipath sage skill graphs competency analytics">
+                        <div class="blog-badge"><i class="fas fa-chart-line"></i> Learning Analytics &amp; Skill Trees</div>
+                        <h3 class="blog-title">Competency Graph Mapping &amp; Career Skill Gap Analytics</h3>
+                        <p class="blog-author-tag"><i class="fas fa-user-edit"></i> Authored by <strong>Rahul Kushwaha</strong> (AI Developer &amp; EdTech Researcher)</p>
+                        <p class="blog-snippet">Mapping academic curriculum milestones against real-world industry demands through visual skill trees, graph schemas, and competency matching algorithms.</p>
+                        <div class="blog-citations">
+                            <span><i class="fas fa-bookmark"></i> Key Literature: Ryan &amp; Deci (2000), Baker (2010), Csikszentmihalyi (1990)</span>
+                        </div>
+                        <div style="font-size: 0.82rem; color: var(--color-accent-2); margin-bottom: 1rem;">
+                            <i class="fas fa-cubes"></i> <strong>Implemented In Platforms:</strong> PathEd Ecosystem, CogniPath, &amp; SAGE
+                        </div>
+                        <div class="blog-footer">
+                            <button onclick="openResearchPaper(6)" class="btn btn--primary btn--sm"><i class="fas fa-book-open"></i> Read Full Paper</button>
+                            <div class="blog-meta-right">
+                                <span class="blog-watch-count" data-paper-id="6"><i class="fas fa-eye"></i> <span class="watch-num">--</span> views</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 8 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Paper 7 -->
+                    <article class="blog-card" data-reveal data-category="ai4ed" data-keywords="sage cognipath scholarpulse kbc pathed ethics autonomy">
+                        <div class="blog-badge"><i class="fas fa-shield-alt"></i> Responsible AI &amp; EdTech Ethics</div>
+                        <h3 class="blog-title">Responsible AI &amp; Ethics in EdTech: Balancing Personalization with Cognitive Autonomy</h3>
+                        <p class="blog-author-tag"><i class="fas fa-user-edit"></i> Authored by <strong>Rahul Kushwaha</strong> (AI Developer &amp; EdTech Researcher)</p>
+                        <p class="blog-snippet">Synthesizing findings across SAGE, CogniPath, ScholarPulse, and KBC Quiz System to formulate an ethical AI framework ensuring algorithms empower human agency.</p>
+                        <div class="blog-citations">
+                            <span><i class="fas fa-bookmark"></i> Key Literature: Floridi et al. (2018), Selwyn (2019), UNESCO (2021)</span>
+                        </div>
+                        <div style="font-size: 0.82rem; color: var(--color-accent-2); margin-bottom: 1rem;">
+                            <i class="fas fa-cubes"></i> <strong>Implemented In Platforms:</strong> SAGE, CogniPath, ScholarPulse, KBC Quiz System, &amp; PathEd
+                        </div>
+                        <div class="blog-footer">
+                            <button onclick="openResearchPaper(7)" class="btn btn--primary btn--sm"><i class="fas fa-book-open"></i> Read Full Paper</button>
+                            <div class="blog-meta-right">
+                                <span class="blog-watch-count" data-paper-id="7"><i class="fas fa-eye"></i> <span class="watch-num">--</span> views</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 11 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Viewer for Research Papers -->
+    <div class="custom-modal" id="researchPaperModal">
+        <div class="modal-backdrop" onclick="closeResearchPaper()"></div>
+        <div class="modal-dialog academic-modal-dialog">
+            <button class="modal-close-btn" onclick="closeResearchPaper()" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="researchPaperContent">
+                <!-- Populated dynamically via script.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">RK<span class="logo-accent">.</span></span>
+                <p class="footer-tagline">AI Developer • Education Technology Researcher • Human Psychology Enthusiast</p>
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="blog.html">Blog &amp; Papers</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/rahul-kushwaha-7698b3368" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Dominus005era" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://leetcode.com/u/tULNEGtHUu/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Rahul Kushwaha. Built with research passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+
+    <script>
+        function filterBlogPosts() {
+            const query = document.getElementById('blogSearchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('#fullBlogGrid .blog-card');
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                const keywords = card.getAttribute('data-keywords') || '';
+                if (text.includes(query) || keywords.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function setBlogCategory(category, btn) {
+            document.querySelectorAll('#blogFilterTabs .github-filter-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cards = document.querySelectorAll('#fullBlogGrid .blog-card');
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
