@@ -24,6 +24,18 @@
 
 'use strict'; /* Strict mode — catches common JS mistakes */
 
+/* Immediate Theme Check (Prevents Flash of Wrong Theme) */
+(function() {
+    try {
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        if (savedTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        } else if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    } catch (e) {}
+})();
+
 
 /* ================================================================
    ██  01 — TYPED TEXT STRINGS
@@ -1545,6 +1557,53 @@ function initWatchCounts() {
     });
 }
 
+/* ================================================================
+   ██  21 — THEME SWITCHER ENGINE (Dark & Light Mode)
+================================================================ */
+function initThemeSwitcher() {
+    const toggleBtns = document.querySelectorAll('#themeToggleBtn, .theme-toggle-btn');
+    const root = document.documentElement;
+
+    /* Get saved theme preference or default to dark */
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    let currentTheme = savedTheme ? savedTheme : 'dark';
+
+    function updateThemeUI(theme) {
+        currentTheme = theme;
+        if (theme === 'light') {
+            root.setAttribute('data-theme', 'light');
+        } else {
+            root.removeAttribute('data-theme');
+            root.setAttribute('data-theme', 'dark');
+        }
+        localStorage.setItem('portfolio-theme', theme);
+
+        toggleBtns.forEach(btn => {
+            if (theme === 'light') {
+                btn.classList.add('is-light');
+                btn.setAttribute('title', 'Switch to Dark Mode');
+                btn.setAttribute('aria-label', 'Switch to Dark Mode');
+            } else {
+                btn.classList.remove('is-light');
+                btn.setAttribute('title', 'Switch to Light Mode');
+                btn.setAttribute('aria-label', 'Switch to Light Mode');
+            }
+        });
+    }
+
+    /* Apply current theme on load */
+    updateThemeUI(currentTheme);
+
+    /* Bind click handlers */
+    toggleBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            updateThemeUI(newTheme);
+        });
+    });
+}
+
 
 /* ================================================================
    ██  INIT — RUNS EVERYTHING
@@ -1552,6 +1611,9 @@ function initWatchCounts() {
    DOMContentLoaded fires when HTML is parsed (before images load).
 ================================================================ */
 document.addEventListener('DOMContentLoaded', () => {
+
+    /* 0. Theme Switcher initialized early */
+    initThemeSwitcher();
 
     /* 1. Loader first — so it's visible before anything else */
     initLoader();
@@ -1609,5 +1671,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initWatchCounts();
 
 });
+
 
 

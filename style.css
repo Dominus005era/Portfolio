@@ -3812,3 +3812,278 @@ strong { color: var(--color-accent); font-weight: 600; }
 }
 
 
+/* ================================================================
+   ██  20 — LIGHT THEME SYSTEM & TOGGLE BUTTON
+   Implements crisp Ice Teal & Mint Emerald Light Theme mode
+================================================================ */
+
+/* ── LIGHT THEME VARIABLE OVERRIDES ───────────────────────────── */
+[data-theme="light"] {
+    --color-bg:        #f4f8f8; /* Crisp soft mint-tinted ice white */
+    --color-surface:   #ffffff; /* Pure crisp white for cards */
+    --color-surface-2: #e4f1f1; /* Light mint-teal container surface */
+    --color-border:    rgba(0, 150, 175, 0.18); /* Clean mint-teal border */
+
+    --color-text:       #0c2625; /* Deep emerald charcoal for crystal-clear readability */
+    --color-text-muted: #2f5653; /* Medium emerald slate */
+    --color-text-faint: #527e7a; /* Soft slate teal */
+
+    --color-accent:      #007a99; /* Deep vibrant cyan (high contrast on white) */
+    --color-accent-2:    #00965e; /* Vibrant emerald green */
+    --color-accent-glow: rgba(0, 150, 175, 0.2);
+
+    --shadow-card: 0 8px 32px rgba(0, 50, 60, 0.07);
+    --shadow-glow: 0 0 25px rgba(0, 150, 175, 0.15);
+}
+
+/* ── THEME TOGGLE BUTTON STYLING ─────────────────────────────── */
+.theme-toggle-li {
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--color-border);
+    color: var(--color-accent);
+    cursor: pointer !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    margin-left: 0.5rem;
+}
+
+.theme-toggle-btn:hover {
+    background: rgba(0, 217, 255, 0.15);
+    transform: scale(1.08) rotate(15deg);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 15px var(--color-accent-glow);
+}
+
+.theme-icon-sun, .theme-icon-moon {
+    font-size: 1.1rem;
+    position: absolute;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+}
+
+/* Dark mode (default): Sun icon visible */
+.theme-icon-sun {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+    color: #f59e0b; /* Golden Sun */
+}
+
+.theme-icon-moon {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+    color: #00d9ff;
+}
+
+/* Light mode state */
+[data-theme="light"] .theme-toggle-btn {
+    background: rgba(0, 150, 175, 0.1);
+    border-color: rgba(0, 150, 175, 0.25);
+    color: #007a99;
+}
+
+[data-theme="light"] .theme-icon-sun {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.5);
+}
+
+[data-theme="light"] .theme-icon-moon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+    color: #007a99; /* Deep Cyan Moon */
+}
+
+/* ── LIGHT MODE COMPONENT & LAYOUT OVERRIDES ─────────────────── */
+body, .site-header, .glass-milestone-card, .project-card, .skill-card-theme, 
+.about-box, .bento-card, .blog-card, .edu-card, .contact-card, .modal-dialog, 
+.research-disclaimer-card, .github-repo-card, .footer-brand, .research-quote-card,
+.nav-links, .custom-modal, input, textarea {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Site Header */
+[data-theme="light"] .site-header.is-scrolled {
+    background: rgba(244, 248, 248, 0.92);
+    border-bottom-color: rgba(0, 150, 175, 0.18);
+    box-shadow: 0 4px 20px rgba(0, 60, 70, 0.06);
+}
+
+/* Hero Background & Floaters */
+[data-theme="light"] .hero-grid {
+    background-image: radial-gradient(rgba(0, 136, 168, 0.15) 1px, transparent 1px);
+}
+
+[data-theme="light"] .hero-orb--teal {
+    background: radial-gradient(circle, rgba(0, 175, 210, 0.18) 0%, transparent 70%);
+}
+
+[data-theme="light"] .hero-orb--green {
+    background: radial-gradient(circle, rgba(0, 180, 110, 0.15) 0%, transparent 70%);
+}
+
+[data-theme="light"] .cyber-floater {
+    background: rgba(255, 255, 255, 0.88);
+    border-color: rgba(0, 150, 175, 0.2);
+    color: #007a99;
+    box-shadow: 0 4px 15px rgba(0, 80, 90, 0.08);
+}
+
+[data-theme="light"] .floating-text {
+    color: rgba(0, 150, 175, 0.35);
+}
+
+/* Hero Tagline & Role */
+[data-theme="light"] .hero-title__last {
+    color: #007a99;
+    text-shadow: none;
+}
+
+[data-theme="light"] .tagline-quote {
+    color: #2f5653;
+}
+
+[data-theme="light"] .typed-arrow {
+    color: #00965e;
+}
+
+/* Cards & Containers */
+[data-theme="light"] .glass-milestone-card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .skill-card-theme,
+[data-theme="light"] .about-box,
+[data-theme="light"] .bento-card,
+[data-theme="light"] .blog-card,
+[data-theme="light"] .edu-card,
+[data-theme="light"] .contact-card,
+[data-theme="light"] .github-repo-card,
+[data-theme="light"] .achieve-card,
+[data-theme="light"] .research-quote-card,
+[data-theme="light"] .research-disclaimer-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 150, 175, 0.18) !important;
+    box-shadow: 0 6px 24px rgba(0, 60, 70, 0.06) !important;
+}
+
+/* Hover States for Light Cards */
+[data-theme="light"] .project-card:hover,
+[data-theme="light"] .glass-milestone-card:hover,
+[data-theme="light"] .bento-card:hover,
+[data-theme="light"] .blog-card:hover,
+[data-theme="light"] .github-repo-card:hover {
+    border-color: rgba(0, 150, 175, 0.4) !important;
+    box-shadow: 0 12px 36px rgba(0, 70, 80, 0.12) !important;
+}
+
+/* Sub-containers & Pillars */
+[data-theme="light"] .pillar-card,
+[data-theme="light"] .bento-subbox,
+[data-theme="light"] .specialty-bullet-item {
+    background: rgba(228, 241, 241, 0.55);
+    border: 1px solid rgba(0, 150, 175, 0.14);
+}
+
+/* Modals */
+[data-theme="light"] .modal-dialog {
+    background: #ffffff !important;
+    border-color: rgba(0, 150, 175, 0.25) !important;
+    box-shadow: 0 20px 60px rgba(0, 40, 50, 0.2) !important;
+    color: #0c2625 !important;
+}
+
+[data-theme="light"] .modal-backdrop {
+    background: rgba(12, 38, 37, 0.65);
+}
+
+[data-theme="light"] .modal-close-btn {
+    background: rgba(0, 150, 175, 0.1);
+    color: #007a99;
+}
+
+[data-theme="light"] .modal-close-btn:hover {
+    background: #007a99;
+    color: #ffffff;
+}
+
+/* Inputs & Form Controls */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] .github-search-input {
+    background: #ffffff !important;
+    border-color: rgba(0, 150, 175, 0.25) !important;
+    color: #0c2625 !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder,
+[data-theme="light"] .github-search-input::placeholder {
+    color: #527e7a !important;
+}
+
+[data-theme="light"] input:focus,
+[data-theme="light"] textarea:focus,
+[data-theme="light"] .github-search-input:focus {
+    border-color: #007a99 !important;
+    box-shadow: 0 0 12px rgba(0, 150, 175, 0.2) !important;
+}
+
+/* Filter Tabs */
+[data-theme="light"] .github-filter-tab {
+    background: #ffffff;
+    border-color: rgba(0, 150, 175, 0.18);
+    color: #2f5653;
+}
+
+[data-theme="light"] .github-filter-tab.active {
+    background: #007a99;
+    color: #ffffff;
+    border-color: #007a99;
+}
+
+/* Buttons */
+[data-theme="light"] .btn--ghost {
+    border-color: #007a99;
+    color: #007a99;
+}
+
+[data-theme="light"] .btn--ghost:hover {
+    background: rgba(0, 150, 175, 0.1);
+}
+
+[data-theme="light"] .proj-link--breakdown {
+    background: rgba(0, 150, 175, 0.1);
+    color: #007a99;
+    border-color: rgba(0, 150, 175, 0.25);
+}
+
+/* Footer */
+[data-theme="light"] .site-footer {
+    background: #e4f1f1;
+    border-top-color: rgba(0, 150, 175, 0.18);
+}
+
+[data-theme="light"] .footer-bottom {
+    background: #d5e8e8;
+    border-top-color: rgba(0, 150, 175, 0.15);
+}
+
+/* Mobile Nav Slide-in Panel */
+@media (max-width: 900px) {
+    [data-theme="light"] .nav-links.is-open {
+        background: #f4f8f8;
+        border-left: 1px solid rgba(0, 150, 175, 0.2);
+    }
+}
+
+
+
