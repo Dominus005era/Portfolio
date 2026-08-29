@@ -1047,13 +1047,22 @@ let githubReposData = [
         html_url: "https://github.com/Dominus005era/Face_Seeker"
     },
     {
-        name: "PathEd-Ecosystem",
-        description: "Career Roadmap Matching & Academic Discovery Engine analyzing real-world skill demands and generating step-by-step competency roadmaps.",
-        language: "JavaScript",
-        stargazers_count: 11,
+        name: "Versha-Weather-AI-Agent",
+        description: "Autonomous real-time Weather & Environmental AI Agent engineered in Python using Strands Agents, live REST telemetry, umbrella heuristics, and outdoor fitness feasibility scoring.",
+        language: "Python",
+        stargazers_count: 7,
+        forks_count: 2,
+        updated_at: "2026-08-20T12:00:00Z",
+        html_url: "https://github.com/Dominus005era/Versha-Weather-AI-Agent"
+    },
+    {
+        name: "SkillGap-Analyzer",
+        description: "Deterministic, explainable career readiness diagnostic engine in Python with set-theoretic matching, alias normalization, and 1,500+ Indian tech job market dataset.",
+        language: "Python",
+        stargazers_count: 9,
         forks_count: 3,
-        updated_at: "2026-06-28T14:20:00Z",
-        html_url: "https://github.com/Dominus005era/PathEd-Ecosystem"
+        updated_at: "2026-08-25T14:30:00Z",
+        html_url: "https://github.com/Dominus005era/SkillGap-Analyzer"
     }
 ];
 
@@ -1195,7 +1204,7 @@ function initGithubRepos() {
 
 /* ================================================================
    ██  18 — PROJECT BREAKDOWN MODAL (Mini Description & Backstory)
-================================================================ */
+=============================================================== */
 const PROJECT_BREAKDOWNS = {
     sage: {
         title: "SAGE (Version 2) — AI-Powered Micro-Learning Platform",
@@ -1211,7 +1220,7 @@ const PROJECT_BREAKDOWNS = {
             "Express + Vite Hybrid Server Architecture"
         ],
         github: "https://github.com/Dominus005era/SAGE",
-        demo: "https://github.com/Dominus005era/SAGE"
+        demo: "https://sage-blush.vercel.app/"
     },
     pathed: {
         title: "PathEd Ecosystem — Career Roadmap Matching Engine",
@@ -1225,8 +1234,8 @@ const PROJECT_BREAKDOWNS = {
             "Real-time Milestone Telemetry",
             "Personalized Skill Gap Analysis"
         ],
-        github: "https://github.com/Dominus005era/PathEd-Ecosystem",
-        demo: "https://github.com/Dominus005era/PathEd-Ecosystem"
+        github: null,
+        demo: null
     },
     scholarplus: {
         title: "ScholarPulse Elite — Academic Intelligence Hub",
@@ -1275,6 +1284,40 @@ const PROJECT_BREAKDOWNS = {
         ],
         github: "https://github.com/Dominus005era/CogniPath",
         demo: "https://cogni-path-pi.vercel.app"
+    },
+    versha: {
+        title: "Versha: Real-Time Weather & Environmental AI Agent",
+        tagline: "Autonomous Decision-Intelligence & Multi-City Telemetry Agent",
+        overview: "Versha is an autonomous, lightweight AI Agent built in Python using the Strands Agents framework. It accepts natural language queries, dynamically extracts single or comparative city entities, interfaces with zero-auth REST APIs (wttr.in, WAQI), computes predictive Rain & Umbrella Advisories, calculates an explainable Outdoor Fitness Feasibility Index (1.0 to 10.0 score), and renders side-by-side comparative terminal matrices.",
+        backstory: "Traditional LLMs suffer from knowledge cutoffs and hallucinations when asked about live atmospheric conditions, while standard weather CLI scripts lack natural language understanding and decision intelligence. Developed as part of the AWS AI & Cloud AI Agent Workshop (Skill Nebula), Versha bridges LLM reasoning with real-time HTTP tooling and explainable heuristic mathematical models.",
+        architecture: "Engineered with Python 3.8+, Strands Agents Architecture (strands-agents), Ollama / Amazon Bedrock model compatibility, native urllib/JSON HTTP tool suites, and a 100% automated unittest suite with zero paid API dependencies.",
+        features: [
+            "Autonomous Natural Language Entity Resolution (Single & Multi-City Queries)",
+            "Real-Time Live Atmospheric Telemetry (Temp, Humidity, Pressure, UV, Solar Cycles)",
+            "Smart Rain & Umbrella Advisory Engine (Precipitation Probability & Volume)",
+            "Outdoor Fitness Feasibility Scoring Algorithm (Heuristic 1.0–10.0 Penalty Index)",
+            "Side-by-Side Multi-City Comparison Matrices & Structured JSON Output",
+            "Zero-Cost Architecture with Universal UTF-8 Console Compatibility"
+        ],
+        github: "https://github.com/Dominus005era/Versha-Weather-AI-Agent",
+        demo: null
+    },
+    skillgap: {
+        title: "SkillGap: Explainable Skill Gap & Career Readiness Analyzer",
+        tagline: "Set-Theoretic Gap Detection & INR Compensation Telemetry Engine",
+        overview: "SkillGap is a high-performance, deterministic career diagnostic platform engineered in pure Python. It compares candidate competencies against target industry benchmarks using mathematical set theory (Intersection & Difference), normalizes aliases in O(1) time, categorizes missing skills by priority (High/Medium/Low), and maps experience tiers to real-world Indian Tech compensation brackets (INR LPA) from a 1,500-posting dataset.",
+        backstory: "Traditional career guidance and automated hiring tools frequently rely on opaque 'black-box' models that cannot explain why a candidate was deemed unqualified. Developed as part of the Learn Depth ML Internship, SkillGap replaces black-box scoring with 100% transparent set mathematics and explainable weighted scoring grounded in real-world Indian market telemetry.",
+        architecture: "Engineered with Python 3.8+ standard library, clean Object-Oriented Domain Models (dataclasses), Set-Theoretic Matching Algorithms, priority-weighted readiness formulas, and an integrated 1,500-posting Indian tech market dataset.",
+        features: [
+            "Set-Theoretic Skill Gap Detection (Exact Intersection & Difference Operations)",
+            "Skill Synonym & Abbreviation Normalization Dictionary (O(1) Hash Map)",
+            "Priority-Weighted Career Readiness Scoring (3x High, 2x Medium, 1x Low Weights)",
+            "Real-World Indian Tech Job Dataset Integration (1,500+ Postings with INR LPA Salaries)",
+            "Experience Tier Resolution (Fresher to Senior Band Mapping)",
+            "Interactive Step-by-Step CLI Wizard & Direct Command-Line Argument Mode"
+        ],
+        github: "https://github.com/Dominus005era/SkillGap-Analyzer",
+        demo: null
     }
 };
 
@@ -1314,9 +1357,10 @@ function openProjectBreakdown(id) {
             </ul>
         </div>
 
-        <div style="display:flex; gap:1rem; flex-wrap:wrap; border-top:1px solid var(--color-border); padding-top:1.25rem;">
-            <a href="${data.github}" target="_blank" rel="noopener" class="btn btn--primary btn--sm"><i class="fab fa-github"></i> View GitHub Repository</a>
-            <a href="${data.demo}" target="_blank" rel="noopener" class="btn btn--ghost btn--sm"><i class="fas fa-external-link-alt"></i> Live Project Demo</a>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; border-top:1px solid var(--color-border); padding-top:1.25rem; align-items: center;">
+            ${data.github ? `<a href="${data.github}" target="_blank" rel="noopener" class="btn btn--primary btn--sm"><i class="fab fa-github"></i> View GitHub Repository</a>` : ''}
+            ${data.demo ? `<a href="${data.demo}" target="_blank" rel="noopener" class="btn btn--ghost btn--sm"><i class="fas fa-external-link-alt"></i> Live Project Demo</a>` : ''}
+            ${!data.github && !data.demo ? `<span style="font-size:0.85rem; color: #00ffaa; background: rgba(0,255,170,0.1); border: 1px solid rgba(0,255,170,0.3); padding: 6px 14px; border-radius: 20px; display: inline-flex; align-items: center; gap: 6px;"><i class="fas fa-tools"></i> Active Production Phase</span>` : ''}
         </div>
     `;
 

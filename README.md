@@ -6,12 +6,14 @@ Welcome to my personal portfolio repository! I am an AI Developer, Software Arch
 
 ## 🌟 Featured Projects
 
-1. **[SAGE (Version 2)](https://github.com/Dominus005era/SAGE)** — AI-powered micro-learning platform built with React 19, Vite 6, TypeScript 5.8, Google Gemini API (`gemini-3-flash-preview`), and Firebase v12.
+1. **[SAGE (Version 2)](https://sage-blush.vercel.app/)** ([GitHub](https://github.com/Dominus005era/SAGE)) — AI-powered micro-learning platform built with React 19, Vite 6, TypeScript 5.8, Google Gemini API (`gemini-3-flash-preview`), and Firebase v12.
 2. **[CogniPath](https://github.com/Dominus005era/CogniPath)** — Full-stack AI platform generating dynamic 9-chapter cognitive learning roadmaps powered by Google Gemini 2.0 Flash, in-chapter AI tutor, and completion certificates.
 3. **[ScholarPulse Elite](https://github.com/Dominus005era/scholarpulse-elite)** — Academic management & ERP intelligence hub utilizing Gemini AI to parse attendance screenshots and exam schedules.
 4. **[KBS Educational Quiz System](https://github.com/Dominus005era/kbs-educational-quiz-system)** — Gamified Kaun Banega Crorepati (KBS) style quiz engine powered by Gemini 3.5 Flash AI with 4 lifelines, Super Bonus rounds, intelligent quiz caching, and AI teacher report cards.
-5. **[PathEd Ecosystem](https://github.com/Dominus005era/PathEd-Ecosystem)** — Career roadmap matching engine bridging academic study with real-world industry competencies.
-6. **[Face_Seeker](https://github.com/Dominus005era/Face_Seeker)** — Deep learning facial recognition engine for biometric verification.
+5. **[Versha: Weather & Environmental AI Agent](https://github.com/Dominus005era/Versha-Weather-AI-Agent)** — Autonomous decision-intelligence climate AI agent engineered with Strands Agents, live REST telemetry, umbrella advisories, and outdoor fitness feasibility scoring.
+6. **[SkillGap: Career Readiness & Skill Gap Analyzer](https://github.com/Dominus005era/SkillGap-Analyzer)** — Deterministic, explainable career readiness diagnostic engine in Python with set-theoretic matching, alias normalization, and 1,500+ Indian tech job market dataset.
+7. **PathEd Ecosystem** *(In Active Production)* — Career roadmap matching engine bridging academic study with real-world industry competencies.
+8. **[Face_Seeker](https://github.com/Dominus005era/Face_Seeker)** — Deep learning facial recognition engine for biometric verification.
 
 ---
 
