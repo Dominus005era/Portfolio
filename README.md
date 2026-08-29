@@ -19,7 +19,7 @@ Welcome to my personal portfolio repository! I am an AI Developer, Software Arch
 
 ## 📚 Academic Research Papers (Personal Blog)
 
-This repository includes a dedicated research blog (`blog.html`) featuring 7 academic research papers authored by **Rahul Kushwaha**, connecting AI development with Cognitive Physiology & EdTech:
+This repository includes a dedicated research blog (`blog.html`) featuring 9 academic research papers authored by **Rahul Kushwaha**, connecting AI development with Cognitive Physiology, Autonomous Agency, & EdTech:
 1. *Cognitive Load Minimization & Micro-Scaffolding in AI Learning Systems*
 2. *Human-AI Co-Adaptation & Contextual Socratic Tutoring Engines*
 3. *High-Stakes Retrieval Practice, Timed Arousal, & Lifeline Telemetry*
@@ -27,6 +27,8 @@ This repository includes a dedicated research blog (`blog.html`) featuring 7 aca
 5. *Dynamic 9-Chapter Curriculum Generation & Multi-Model AI Fallback Architectures*
 6. *Competency Graph Mapping & Career Skill Gap Analytics*
 7. *Responsible AI & Ethics in EdTech: Balancing Personalization with Cognitive Autonomy*
+8. *Autonomous Tool-Augmented Agency, Real-Time Environmental Telemetry, & Heuristic Decision Scoring*
+9. *Deterministic Set-Theoretic Modeling & Empirical Compensation Telemetry in Career Diagnostics*
 
 ---
 

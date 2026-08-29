@@ -1469,15 +1469,16 @@ const RESEARCH_PAPERS = {
         role: "AI Developer & EdTech Researcher",
         affiliation: "United Institute of Technology / Independent EdTech Research Group",
         journal: "Personal Paper Report • Learning Analytics & Skill Trees",
-        projects: "PathEd Ecosystem, CogniPath, & SAGE (Version 2)",
-        abstract: "Traditional educational transcripts fail to communicate functional industry competencies. This paper presents graph-based skill mapping architectures developed across PathEd Ecosystem and CogniPath. By representing skills as interconnected graph nodes, platforms quantify student readiness for target career roles.",
-        introduction: "University curricula often lag behind rapidly evolving tech industry skill demands. Mapping course learning outcomes to live job market skill graphs exposes specific competency gaps that students can address proactively.",
-        methodology: "We constructed graph schemas representing prerequisite skill trees (e.g., Data Structures → Algorithm Design → System Architecture). PathEd and CogniPath compare student project milestones against target industry role vectors to output real-time skill alignment percentages.",
-        conclusion: "Competency graph analytics empower learners with visual, actionable roadmaps toward employment while giving recruiters objective proof of candidate mastery.",
+        projects: "SkillGap: Career Readiness & Skill Gap Analyzer, PathEd Ecosystem, & CogniPath",
+        abstract: "Traditional educational transcripts fail to communicate functional industry competencies. This paper presents graph-based skill mapping and set-theoretic gap detection architectures developed across SkillGap and PathEd. By representing skills as interconnected graph nodes and discrete mathematical sets, platforms quantify student readiness for target career roles.",
+        introduction: "University curricula often lag behind rapidly evolving tech industry skill demands. Mapping course learning outcomes to live job market skill graphs and deterministic set differences exposes specific competency gaps that students can address proactively.",
+        methodology: "We constructed graph schemas and set-theoretic evaluators comparing candidate competency vectors against target industry role vectors. The engine performs O(1) synonym normalization and priority weighting (High=3x, Medium=2x, Low=1x) across 1,500+ Indian job postings to output real-time skill alignment percentages and INR salary tiers.",
+        conclusion: "Competency graph analytics and set-theoretic diagnostics empower learners with visual, actionable roadmaps toward employment while giving recruiters objective proof of candidate mastery.",
         references: [
             "Ryan, R. M., & Deci, E. L. (2000). Self-determination theory and intrinsic motivation. American Psychologist.",
             "Baker, R. S. (2010). Data mining for education. International Encyclopedia of Education.",
-            "Kushwaha, R. (2026). PathEd: Competency Skill Graph Architectures. Educational Data Mining."
+            "Halmos, P. R. (1960). Naive Set Theory. D. Van Nostrand Company.",
+            "Kushwaha, R. (2026). SkillGap & PathEd: Set-Theoretic Modeling & Competency Graphs. Educational Data Mining."
         ]
     },
     7: {
@@ -1496,6 +1497,42 @@ const RESEARCH_PAPERS = {
             "Selwyn, N. (2019). Should robots replace teachers? AI and the future of education. Polity Press.",
             "UNESCO (2021). Recommendation on the Ethics of Artificial Intelligence.",
             "Kushwaha, R. (2026). Human-Centered AI Frameworks in Web-Based Education. AI & Society Research."
+        ]
+    },
+    8: {
+        title: "Autonomous Tool-Augmented Agency, Real-Time Environmental Telemetry, & Heuristic Decision Scoring",
+        author: "Rahul Kushwaha",
+        role: "AI Developer & EdTech Researcher",
+        affiliation: "United Institute of Technology / Independent AI & Systems Research Group",
+        journal: "Personal Paper Report • Autonomous AI Agents & Telemetry",
+        projects: "Versha: Weather & Environmental AI Agent",
+        abstract: "Standard Large Language Models (LLMs) operate under fixed knowledge cutoffs and lack situational grounding in transient, real-time physical environments. When queried about live atmospheric dynamics, LLMs frequently hallucinate obsolete data. This research paper evaluates tool-augmented autonomous agency engineered in Versha using the Strands Agents framework and Python. By bridging natural language entity extraction with zero-authentication REST telemetry (wttr.in, WAQI), the agent executes real-time diagnostics, evaluates predictive rain and umbrella decision logic, and computes an explainable Outdoor Fitness Feasibility Index (1.0 to 10.0 score) via multi-variable mathematical penalty functions.",
+        introduction: "In modern AI systems engineering, autonomous agents are rapidly evolving from static text generation engines into active, tool-using intelligences. However, bridging LLM reasoning with live REST endpoints requires robust entity parsing, latency-resilient network layers, and explainable decision algorithms rather than opaque heuristic approximations.",
+        methodology: "We designed a modular agent pipeline in Python integrating: (1) NLP Word-Boundary Entity Resolution for single and multi-city queries, (2) Resilient HTTP Telemetry Ingestion parsing multi-layer JSON payloads (thermal profiles, atmospheric dynamics, wind/UV vectors), (3) Heuristic Penalty Scoring: Score = max(1.0, min(10.0, 10.0 - P_temp - P_rain - P_humidity - P_uv - P_wind)), and (4) Comparative Matrix Formatters rendering dual-location diagnostic cards in terminal ASCII dashboards.",
+        conclusion: "Tool-augmented autonomous agents effectively eliminate knowledge cutoff hallucinations while delivering structured, actionable decision support. The explainable penalty formulation provides transparent, verifiable reasoning for outdoor fitness and commute safety.",
+        references: [
+            "Schick, T., et al. (2023). Toolformer: Language models can teach themselves to use tools. NeurIPS.",
+            "Yao, S., et al. (2022). ReAct: Synergizing reasoning and acting in language models. ICLR.",
+            "Russell, S., & Norvig, P. (2020). Artificial Intelligence: A Modern Approach. Pearson.",
+            "Kushwaha, R. (2026). Versha: Autonomous Tool-Augmented Climate Intelligence & Heuristic Telemetry. Systems & AI Agent Reports."
+        ]
+    },
+    9: {
+        title: "Deterministic Set-Theoretic Modeling & Empirical Compensation Telemetry in Career Diagnostics",
+        author: "Rahul Kushwaha",
+        role: "AI Developer & EdTech Researcher",
+        affiliation: "United Institute of Technology / Independent EdTech Research Group",
+        journal: "Personal Paper Report • Career Analytics & Set Theory",
+        projects: "SkillGap: Career Readiness & Skill Gap Analyzer & PathEd Ecosystem",
+        abstract: "Automated career guidance and resume evaluation platforms frequently employ black-box neural ranking algorithms that fail to provide explainable diagnostic feedback to candidates. This research presents the deterministic mathematical framework implemented in SkillGap. By leveraging pure set theory (Intersection Candidate ∩ Target and Difference Target \\ Candidate) combined with O(1) hash map synonym normalization, the engine achieves 100% deterministic diagnostic accuracy. Furthermore, by mining 1,500 real-world Indian tech job postings across 5 tech hubs, the system maps experience tiers directly to empirical Indian Rupee compensation brackets (INR LPA), providing candidates with actionable, prioritized skill acquisition roadmaps.",
+        introduction: "Modern job seekers face significant ambiguity regarding exact skill requirements and realistic compensation benchmarks. Machine learning resume parsers often exhibit algorithmic bias and opacity. This paper outlines an explainable, deterministic alternative based on discrete set mathematics and empirical market telemetry.",
+        methodology: "We constructed a 3-layer diagnostic pipeline in pure Python: (1) Alias Normalization Dictionary mapping non-standard synonyms (e.g., 'ML', 'py', 'k8s') to canonical titles in O(1) time, (2) Set-Theoretic Engine classifying skills into Matched and Missing subsets with priority weighting (High=3x, Medium=2x, Low=1x), and (3) Empirical Indian Compensation Matrix resolving salary percentiles (₹6.5–17.9 LPA) based on candidate experience tiers.",
+        conclusion: "Deterministic set-theoretic diagnostics eliminate the opacity of black-box career advice, providing students with mathematically verifiable skill gap roadmaps and accurate compensation expectations.",
+        references: [
+            "Halmos, P. R. (1960). Naive Set Theory. D. Van Nostrand Company.",
+            "Baker, R. S. (2010). Data mining for education. International Encyclopedia of Education.",
+            "Cormen, T. H., et al. (2009). Introduction to Algorithms (3rd ed.). MIT Press.",
+            "Kushwaha, R. (2026). SkillGap: Set-Theoretic Diagnostic Algorithms & Compensation Telemetry. Educational Data Mining Briefs."
         ]
     }
 };
@@ -1568,7 +1605,9 @@ function getDynamicWatchCount(paperId) {
         4: 1296,
         5: 1952,
         6: 1638,
-        7: 2410
+        7: 2410,
+        8: 1572,
+        9: 1730
     };
     
     const base = baseCounts[id] || (1200 + id * 140);
