@@ -12,7 +12,7 @@ Welcome to my personal portfolio repository! I am an AI Developer, Software Arch
 4. **[KBS Educational Quiz System](https://github.com/Dominus005era/kbs-educational-quiz-system)** — Gamified Kaun Banega Crorepati (KBS) style quiz engine powered by Gemini 3.5 Flash AI with 4 lifelines, Super Bonus rounds, intelligent quiz caching, and AI teacher report cards.
 5. **[Versha: Weather & Environmental AI Agent](https://github.com/Dominus005era/Versha-Weather-AI-Agent)** — Autonomous decision-intelligence climate AI agent engineered with Strands Agents, live REST telemetry, umbrella advisories, and outdoor fitness feasibility scoring.
 6. **[SkillGap: Career Readiness & Skill Gap Analyzer](https://github.com/Dominus005era/SkillGap-Analyzer)** — Deterministic, explainable career readiness diagnostic engine in Python with set-theoretic matching, alias normalization, and 1,500+ Indian tech job market dataset.
-7. **PathEd Ecosystem** *(In Active Production)* — Career roadmap matching engine bridging academic study with real-world industry competencies.
+7. **PathSync Learning Ecosystem** *(In Active Production)* — Career roadmap matching engine bridging academic study with real-world industry competencies.
 8. **[Face_Seeker](https://github.com/Dominus005era/Face_Seeker)** — Deep learning facial recognition engine for biometric verification.
 
 ---

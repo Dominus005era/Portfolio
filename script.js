@@ -49,7 +49,7 @@ const TYPED_STRINGS = [
     "AI Developer & EdTech Researcher",
     "Full-Stack Web & Mobile Engineer",
     "Cognitive Physiology & Learning Science Enthusiast",
-    "Creator of SAGE & PathEd",
+    "Creator of SAGE & PathSync Learning",
     "Adaptive AI Learning Systems Architect",
 ];
 
@@ -795,7 +795,7 @@ const GALLERY_DATA = {
         ]
     },
     pathed: {
-        title: 'PathEd — Educational Ecosystem',
+        title: 'PathSync Learning — Educational Ecosystem',
         images: [
             'path/to/pathed-preview-1.jpg',
             'path/to/pathed-preview-2.jpg',
@@ -1063,6 +1063,51 @@ let githubReposData = [
         forks_count: 3,
         updated_at: "2026-08-25T14:30:00Z",
         html_url: "https://github.com/Dominus005era/SkillGap-Analyzer"
+    },
+    {
+        name: "LogicLens",
+        description: "LogicLens AI is a multi-perspective debate simulator powered by Google Gemma 4. Evaluates topics across 4 AI cognitive archetypes with real-time speech synthesis and PDF reports.",
+        language: "JavaScript",
+        stargazers_count: 11,
+        forks_count: 3,
+        updated_at: "2026-08-15T10:00:00Z",
+        html_url: "https://github.com/Dominus005era/LogicLens"
+    },
+    {
+        name: "Brahmaputra-FloodCast",
+        description: "FloodSense AI is a real-time early warning system for the Brahmaputra Basin (Assam). Uses 19 hydrological features and Random Forest ML (99% F1-score) with interactive GIS simulations.",
+        language: "Python",
+        stargazers_count: 6,
+        forks_count: 1,
+        updated_at: "2026-09-01T15:20:00Z",
+        html_url: "https://github.com/Dominus005era/Brahmaputra-FloodCast"
+    },
+    {
+        name: "CampusHire-Eligibility-Predictor",
+        description: "Interpretable machine learning system using Logistic Regression to predict campus placement eligibility from student CGPA, coding, and attendance telemetry.",
+        language: "Python",
+        stargazers_count: 4,
+        forks_count: 1,
+        updated_at: "2026-08-28T11:45:00Z",
+        html_url: "https://github.com/Dominus005era/CampusHire-Eligibility-Predictor"
+    },
+    {
+        name: "TalentPulse-Attrition-Predictor",
+        description: "Binary classification ML project predicting 6-month employee attrition risk with interpretable odds ratios and actionable HR retention telemetry.",
+        language: "Python",
+        stargazers_count: 4,
+        forks_count: 1,
+        updated_at: "2026-08-27T09:15:00Z",
+        html_url: "https://github.com/Dominus005era/TalentPulse-Attrition-Predictor"
+    },
+    {
+        name: "Swiggy-Analysis-bySQL",
+        description: "SQL-powered exploration of Swiggy's restaurant ecosystem, featuring analytical business queries, customer retention trends, and practical database insights.",
+        language: "SQL",
+        stargazers_count: 5,
+        forks_count: 2,
+        updated_at: "2026-08-10T14:00:00Z",
+        html_url: "https://github.com/Dominus005era/Swiggy-Analysis-bySQL"
     }
 ];
 
@@ -1072,10 +1117,11 @@ let currentSearchQuery = '';
 function getLanguageIcon(lang) {
     if (!lang) return '<i class="fas fa-code"></i>';
     const l = lang.toLowerCase();
-    if (l.includes('python')) return '<i class="fab fa-python" style="color: #3776AB;"></i>';
+    if (l.includes('python') || l.includes('jupyter')) return '<i class="fab fa-python" style="color: #3776AB;"></i>';
     if (l.includes('typescript')) return '<svg width="18" height="18" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" fill="#3178C6" rx="10"/><text x="18" y="78" fill="#FFF" font-family="Arial, sans-serif" font-weight="bold" font-size="55">TS</text></svg>';
     if (l.includes('javascript')) return '<i class="fab fa-js" style="color: #F7DF1E;"></i>';
     if (l.includes('html') || l.includes('css')) return '<i class="fab fa-html5" style="color: #E34F26;"></i>';
+    if (l.includes('sql')) return '<i class="fas fa-database" style="color: #00758F;"></i>';
     return '<i class="fas fa-code" style="color: var(--color-accent);"></i>';
 }
 
@@ -1170,24 +1216,24 @@ function fetchLiveGithubRepos() {
         .then(data => {
             if (Array.isArray(data) && data.length > 0) {
                 const liveMap = new Map();
-                githubReposData.forEach(r => liveMap.set(r.name.toLowerCase().replace(/[-_]/g, ''), r));
-                
                 data.forEach(item => {
-                    if (!item.fork) {
+                    if (item && item.name) {
                         const key = item.name.toLowerCase().replace(/[-_]/g, '');
-                        liveMap.set(key, {
-                            name: item.name,
-                            description: item.description,
-                            language: item.language,
-                            stargazers_count: item.stargazers_count,
-                            forks_count: item.forks_count,
-                            updated_at: item.updated_at,
-                            html_url: item.html_url
-                        });
+                        liveMap.set(key, item);
                     }
                 });
-                
-                githubReposData = Array.from(liveMap.values());
+
+                githubReposData.forEach(repo => {
+                    const key = repo.name.toLowerCase().replace(/[-_]/g, '');
+                    const liveItem = liveMap.get(key);
+                    if (liveItem) {
+                        if (typeof liveItem.stargazers_count === 'number') repo.stargazers_count = liveItem.stargazers_count;
+                        if (typeof liveItem.forks_count === 'number') repo.forks_count = liveItem.forks_count;
+                        if (liveItem.updated_at) repo.updated_at = liveItem.updated_at;
+                        if (liveItem.html_url) repo.html_url = liveItem.html_url;
+                    }
+                });
+
                 renderGithubRepos();
             }
         })
@@ -1222,11 +1268,27 @@ const PROJECT_BREAKDOWNS = {
         github: "https://github.com/Dominus005era/SAGE",
         demo: "https://sage-blush.vercel.app/"
     },
+    heartspace: {
+        title: "HeartSpace: Soul Mirror — AI Mental Health & Reflection Ecosystem",
+        tagline: "Empathetic Conversational AI & Privacy-First Emotional Telemetry",
+        overview: "HeartSpace: Soul Mirror is an empathetic AI mental health and reflective journaling ecosystem engineered with React 19, TypeScript, and conversational reflection intelligence. It transforms emotional introspection into structured, supportive self-awareness dialogues while maintaining zero-knowledge privacy standards.",
+        backstory: "Traditional journaling is often passive and fails to offer cognitive reframing during emotional distress. HeartSpace was designed to act as an active, compassionate mirror that listens deeply, identifies cognitive distortions, and guides users through evidence-based mindfulness and reflective inquiries.",
+        architecture: "Engineered with React 19, Vite, TypeScript, conversational reflection models, sentiment analysis telemetry, local encrypted storage, and Framer Motion fluid animations.",
+        features: [
+            "Empathetic Conversational AI Mirror for Real-Time Emotional Reframing",
+            "Daily Mood Telemetry & Visual Sentimental Arc Tracking",
+            "Cognitive Journaling Prompts Rooted in CBT & Mindfulness",
+            "Zero-Knowledge Encrypted Client-Side Storage for Absolute Privacy",
+            "Calming Ambient Audio & Fluid Organic Visual Interfaces"
+        ],
+        github: null,
+        demo: "https://heartspace-soul-mirror.onrender.com/"
+    },
     pathed: {
-        title: "PathEd Ecosystem — Career Roadmap Matching Engine",
+        title: "PathSync Learning Ecosystem — Career Roadmap Matching Engine",
         tagline: "Industry Competency Discovery & Skill Telemetry System",
-        overview: "PathEd bridges the gap between academic education and industry competence by analyzing real-world skill demands and generating dynamic step-by-step career navigation roadmaps.",
-        backstory: "Students often struggle to map university curriculum choices to industry demands. PathEd analyzes real-world skill requirements and generates visual, step-by-step career navigation roadmaps.",
+        overview: "PathSync Learning bridges the gap between academic education and industry competence by analyzing real-world skill demands and generating dynamic step-by-step career navigation roadmaps.",
+        backstory: "Students often struggle to map university curriculum choices to industry demands. PathSync Learning analyzes real-world skill requirements and generates visual, step-by-step career navigation roadmaps.",
         architecture: "Developed using React, Vite, and Node.js with Supabase graph-like schema representations of skill trees. Features interactive nodes, dynamic progress tracking, and recruiter telemetry analytics.",
         features: [
             "Dynamic Visual Skill Roadmaps",
@@ -1382,10 +1444,10 @@ const RESEARCH_PAPERS = {
         role: "AI Developer & EdTech Researcher",
         affiliation: "United Institute of Technology / Independent EdTech Research Group",
         journal: "Personal Paper Report • Cognitive Physiology & EdTech",
-        projects: "SAGE (Version 2), CogniPath, & PathEd Ecosystem",
+        projects: "SAGE (Version 2), CogniPath, & PathSync Learning Ecosystem",
         abstract: "Human working memory is fundamentally limited, processing only 4 to 7 items simultaneously (Sweller, 1988). Traditional web educational applications often overload learners with contiguous dense text, leading to rapid cognitive fatigue and habit dissolution. This research paper evaluates micro-scaffolding and 9-chapter cognitive roadmap architectures engineered across SAGE and CogniPath. By converting linear knowledge into active decision-making challenges, extraneous cognitive load is reduced by 34% while boosting long-term recall rates.",
         introduction: "The digital age presents a paradox: information accessibility has peaked, yet deep learning retention has reached historic lows. Micro-learning and structured chapter roadmaps have emerged as promising mitigation strategies. However, most commercial tools merely truncate text without altering instructional design. This paper proposes a structural framework combining Cognitive Load Theory with Generative AI scenario generation.",
-        methodology: "We implemented an adaptive decision-tree engine evaluating learner responses across three cognitive axes: (1) Response Latency, (2) Choice Confidence, and (3) Scenario Difficulty Calibration across SAGE, CogniPath, and PathEd. The system utilizes Spaced Repetition algorithms (SuperMemo SM-2 derivative) aligned with Vygotsky's Zone of Proximal Development (ZPD).",
+        methodology: "We implemented an adaptive decision-tree engine evaluating learner responses across three cognitive axes: (1) Response Latency, (2) Choice Confidence, and (3) Scenario Difficulty Calibration across SAGE, CogniPath, and PathSync Learning. The system utilizes Spaced Repetition algorithms (SuperMemo SM-2 derivative) aligned with Vygotsky's Zone of Proximal Development (ZPD).",
         conclusion: "Empirical evaluations demonstrate that active scenario-based micro-interactions and 9-chapter cognitive roadmaps significantly enhance intrinsic learner motivation and conceptual mastery. Future work will expand LLM-driven real-time scenario adaptation based on biometric focus telemetry.",
         references: [
             "Sweller, J. (1988). Cognitive load during problem solving: Effects on learning. Cognitive Science, 12(2), 257-285.",
@@ -1469,8 +1531,8 @@ const RESEARCH_PAPERS = {
         role: "AI Developer & EdTech Researcher",
         affiliation: "United Institute of Technology / Independent EdTech Research Group",
         journal: "Personal Paper Report • Learning Analytics & Skill Trees",
-        projects: "SkillGap: Career Readiness & Skill Gap Analyzer, PathEd Ecosystem, & CogniPath",
-        abstract: "Traditional educational transcripts fail to communicate functional industry competencies. This paper presents graph-based skill mapping and set-theoretic gap detection architectures developed across SkillGap and PathEd. By representing skills as interconnected graph nodes and discrete mathematical sets, platforms quantify student readiness for target career roles.",
+        projects: "SkillGap: Career Readiness & Skill Gap Analyzer, PathSync Learning Ecosystem, & CogniPath",
+        abstract: "Traditional educational transcripts fail to communicate functional industry competencies. This paper presents graph-based skill mapping and set-theoretic gap detection architectures developed across SkillGap and PathSync Learning. By representing skills as interconnected graph nodes and discrete mathematical sets, platforms quantify student readiness for target career roles.",
         introduction: "University curricula often lag behind rapidly evolving tech industry skill demands. Mapping course learning outcomes to live job market skill graphs and deterministic set differences exposes specific competency gaps that students can address proactively.",
         methodology: "We constructed graph schemas and set-theoretic evaluators comparing candidate competency vectors against target industry role vectors. The engine performs O(1) synonym normalization and priority weighting (High=3x, Medium=2x, Low=1x) across 1,500+ Indian job postings to output real-time skill alignment percentages and INR salary tiers.",
         conclusion: "Competency graph analytics and set-theoretic diagnostics empower learners with visual, actionable roadmaps toward employment while giving recruiters objective proof of candidate mastery.",
@@ -1478,7 +1540,7 @@ const RESEARCH_PAPERS = {
             "Ryan, R. M., & Deci, E. L. (2000). Self-determination theory and intrinsic motivation. American Psychologist.",
             "Baker, R. S. (2010). Data mining for education. International Encyclopedia of Education.",
             "Halmos, P. R. (1960). Naive Set Theory. D. Van Nostrand Company.",
-            "Kushwaha, R. (2026). SkillGap & PathEd: Set-Theoretic Modeling & Competency Graphs. Educational Data Mining."
+            "Kushwaha, R. (2026). SkillGap & PathSync Learning: Set-Theoretic Modeling & Competency Graphs. Educational Data Mining."
         ]
     },
     7: {
@@ -1487,8 +1549,8 @@ const RESEARCH_PAPERS = {
         role: "AI Developer & EdTech Researcher",
         affiliation: "United Institute of Technology / Independent EdTech Research Group",
         journal: "Personal Paper Report • Responsible AI & EdTech Ethics",
-        projects: "SAGE, CogniPath, ScholarPulse, KBS Quiz System, & PathEd",
-        abstract: "As Artificial Intelligence becomes deeply integrated into educational platforms, ensuring student cognitive autonomy is paramount. Algorithms must not create passive dependence on AI systems. Synthesizing insights across SAGE, CogniPath, ScholarPulse, KBS Quiz System, and PathEd, this paper outlines a human-centered AI framework for educational technology.",
+        projects: "SAGE, CogniPath, ScholarPulse, KBS Quiz System, & PathSync Learning",
+        abstract: "As Artificial Intelligence becomes deeply integrated into educational platforms, ensuring student cognitive autonomy is paramount. Algorithms must not create passive dependence on AI systems. Synthesizing insights across SAGE, CogniPath, ScholarPulse, KBS Quiz System, and PathSync Learning, this paper outlines a human-centered AI framework for educational technology.",
         introduction: "Automated tutoring systems risk over-optimizing for speed of completion, leading to algorithmic hand-holding where students rely on AI to solve problems for them. Ethical EdTech must prioritize desirable difficulties and human curiosity over automated completion.",
         methodology: "We audited multi-agent AI workflows across SAGE, CogniPath, and ScholarPulse using human agency metrics. We established three core principles: (1) Socratic Guardrails, (2) Transparent Skill Analytics, and (3) Voluntary Algorithmic Scaffolding.",
         conclusion: "Responsible EdTech AI must empower human learners to become self-directed thinkers. AI is a scaffolding tool to ignite curiosity, not a replacement for human cognition.",
@@ -1523,7 +1585,7 @@ const RESEARCH_PAPERS = {
         role: "AI Developer & EdTech Researcher",
         affiliation: "United Institute of Technology / Independent EdTech Research Group",
         journal: "Personal Paper Report • Career Analytics & Set Theory",
-        projects: "SkillGap: Career Readiness & Skill Gap Analyzer & PathEd Ecosystem",
+        projects: "SkillGap: Career Readiness & Skill Gap Analyzer & PathSync Learning Ecosystem",
         abstract: "Automated career guidance and resume evaluation platforms frequently employ black-box neural ranking algorithms that fail to provide explainable diagnostic feedback to candidates. This research presents the deterministic mathematical framework implemented in SkillGap. By leveraging pure set theory (Intersection Candidate ∩ Target and Difference Target \\ Candidate) combined with O(1) hash map synonym normalization, the engine achieves 100% deterministic diagnostic accuracy. Furthermore, by mining 1,500 real-world Indian tech job postings across 5 tech hubs, the system maps experience tiers directly to empirical Indian Rupee compensation brackets (INR LPA), providing candidates with actionable, prioritized skill acquisition roadmaps.",
         introduction: "Modern job seekers face significant ambiguity regarding exact skill requirements and realistic compensation benchmarks. Machine learning resume parsers often exhibit algorithmic bias and opacity. This paper outlines an explainable, deterministic alternative based on discrete set mathematics and empirical market telemetry.",
         methodology: "We constructed a 3-layer diagnostic pipeline in pure Python: (1) Alias Normalization Dictionary mapping non-standard synonyms (e.g., 'ML', 'py', 'k8s') to canonical titles in O(1) time, (2) Set-Theoretic Engine classifying skills into Matched and Missing subsets with priority weighting (High=3x, Medium=2x, Low=1x), and (3) Empirical Indian Compensation Matrix resolving salary percentiles (₹6.5–17.9 LPA) based on candidate experience tiers.",
@@ -1754,6 +1816,26 @@ document.addEventListener('DOMContentLoaded', () => {
     initWatchCounts();
 
 });
+
+/* Project category filter function */
+function filterProjects(category, btn) {
+    const cards = document.querySelectorAll('.project-card');
+    const tabs = document.querySelectorAll('.project-filter-tab');
+    if (tabs && btn) {
+        tabs.forEach(t => t.classList.remove('active'));
+        btn.classList.add('active');
+    }
+    cards.forEach(card => {
+        const cat = card.getAttribute('data-category') || '';
+        if (category === 'all' || cat.includes(category)) {
+            card.style.display = '';
+            card.style.opacity = '1';
+        } else {
+            card.style.display = 'none';
+            card.style.opacity = '0';
+        }
+    });
+}
 
 
 
